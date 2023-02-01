@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="darkrp_stuff"
+version="1.4"
+displayName="DarkRP-Stuff"
+credits="Ce mod ajoute des éléments pour du darkRP, fait avec MCreator"
+displayURL="https://mcreator.net"
+authors="CookieG"
+description='''
+Ce mod ajoute des éléments pour du darkRP, fait avec MCreator
+'''
+
+[[dependencies.darkrp_stuff]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

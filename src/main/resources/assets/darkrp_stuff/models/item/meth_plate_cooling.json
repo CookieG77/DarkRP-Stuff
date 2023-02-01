@@ -1,0 +1,7 @@
+{
+  "parent": "darkrp_stuff:custom/methplate",
+  "textures": {
+    "0": "darkrp_stuff:blocks/methplate1",
+    "particle": "darkrp_stuff:items/methplate1"
+  }
+}

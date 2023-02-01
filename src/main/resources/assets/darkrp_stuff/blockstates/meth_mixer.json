@@ -1,0 +1,188 @@
+{
+  "variants": {
+
+  	
+    "facing=north,runningstate=0": {
+      "model": "darkrp_stuff:block/meth_mixer0"
+    },
+    "facing=east,runningstate=0": {
+      "model": "darkrp_stuff:block/meth_mixer0",
+      "y": 90
+    },
+    "facing=south,runningstate=0": {
+      "model": "darkrp_stuff:block/meth_mixer0",
+      "y": 180
+    },
+    "facing=west,runningstate=0": {
+      "model": "darkrp_stuff:block/meth_mixer0",
+      "y": 270
+    },
+
+
+
+    "facing=north,runningstate=1": {
+      "model": "darkrp_stuff:block/meth_mixer1"
+    },
+    "facing=east,runningstate=1": {
+      "model": "darkrp_stuff:block/meth_mixer1",
+      "y": 90
+    },
+    "facing=south,runningstate=1": {
+      "model": "darkrp_stuff:block/meth_mixer1",
+      "y": 180
+    },
+    "facing=west,runningstate=1": {
+      "model": "darkrp_stuff:block/meth_mixer1",
+      "y": 270
+    },
+
+
+
+    "facing=north,runningstate=2": {
+      "model": "darkrp_stuff:block/meth_mixer2"
+    },
+    "facing=east,runningstate=2": {
+      "model": "darkrp_stuff:block/meth_mixer2",
+      "y": 90
+    },
+    "facing=south,runningstate=2": {
+      "model": "darkrp_stuff:block/meth_mixer2",
+      "y": 180
+    },
+    "facing=west,runningstate=2": {
+      "model": "darkrp_stuff:block/meth_mixer2",
+      "y": 270
+    },
+
+
+
+    "facing=north,runningstate=3": {
+      "model": "darkrp_stuff:block/meth_mixer3"
+    },
+    "facing=east,runningstate=3": {
+      "model": "darkrp_stuff:block/meth_mixer3",
+      "y": 90
+    },
+    "facing=south,runningstate=3": {
+      "model": "darkrp_stuff:block/meth_mixer3",
+      "y": 180
+    },
+    "facing=west,runningstate=3": {
+      "model": "darkrp_stuff:block/meth_mixer3",
+      "y": 270
+    },
+
+
+
+    "facing=north,runningstate=4": {
+      "model": "darkrp_stuff:block/meth_mixer4"
+    },
+    "facing=east,runningstate=4": {
+      "model": "darkrp_stuff:block/meth_mixer4",
+      "y": 90
+    },
+    "facing=south,runningstate=4": {
+      "model": "darkrp_stuff:block/meth_mixer4",
+      "y": 180
+    },
+    "facing=west,runningstate=4": {
+      "model": "darkrp_stuff:block/meth_mixer4",
+      "y": 270
+    },
+
+
+
+
+	"facing=north,runningstate=5": {
+      "model": "darkrp_stuff:block/meth_mixer5"
+    },
+    "facing=east,runningstate=5": {
+      "model": "darkrp_stuff:block/meth_mixer5",
+      "y": 90
+    },
+    "facing=south,runningstate=5": {
+      "model": "darkrp_stuff:block/meth_mixer5",
+      "y": 180
+    },
+    "facing=west,runningstate=5": {
+      "model": "darkrp_stuff:block/meth_mixer5",
+      "y": 270
+    },
+
+
+
+
+	"facing=north,runningstate=6": {
+      "model": "darkrp_stuff:block/meth_mixer6"
+    },
+    "facing=east,runningstate=6": {
+      "model": "darkrp_stuff:block/meth_mixer6",
+      "y": 90
+    },
+    "facing=south,runningstate=6": {
+      "model": "darkrp_stuff:block/meth_mixer6",
+      "y": 180
+    },
+    "facing=west,runningstate=6": {
+      "model": "darkrp_stuff:block/meth_mixer6",
+      "y": 270
+    },
+
+
+
+
+	"facing=north,runningstate=7": {
+      "model": "darkrp_stuff:block/meth_mixer7"
+    },
+    "facing=east,runningstate=7": {
+      "model": "darkrp_stuff:block/meth_mixer7",
+      "y": 90
+    },
+    "facing=south,runningstate=7": {
+      "model": "darkrp_stuff:block/meth_mixer7",
+      "y": 180
+    },
+    "facing=west,runningstate=7": {
+      "model": "darkrp_stuff:block/meth_mixer7",
+      "y": 270
+    },
+
+
+
+
+	"facing=north,runningstate=8": {
+      "model": "darkrp_stuff:block/meth_mixer8"
+    },
+    "facing=east,runningstate=8": {
+      "model": "darkrp_stuff:block/meth_mixer8",
+      "y": 90
+    },
+    "facing=south,runningstate=8": {
+      "model": "darkrp_stuff:block/meth_mixer8",
+      "y": 180
+    },
+    "facing=west,runningstate=8": {
+      "model": "darkrp_stuff:block/meth_mixer8",
+      "y": 270
+    },
+
+
+
+
+	"facing=north,runningstate=9": {
+      "model": "darkrp_stuff:block/meth_mixer9"
+    },
+    "facing=east,runningstate=9": {
+      "model": "darkrp_stuff:block/meth_mixer9",
+      "y": 90
+    },
+    "facing=south,runningstate=9": {
+      "model": "darkrp_stuff:block/meth_mixer9",
+      "y": 180
+    },
+    "facing=west,runningstate=9": {
+      "model": "darkrp_stuff:block/meth_mixer9",
+      "y": 270
+    }
+  }
+}

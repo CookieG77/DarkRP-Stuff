@@ -1,0 +1,40 @@
+{
+  "moneyclick": {
+    "category": "block",
+    "subtitle": "subtitles.moneyclick",
+    "sounds": [
+      {
+        "name": "darkrp_stuff:moneyclick",
+        "stream": false
+      }
+    ]
+  },
+  "fan": {
+    "category": "block",
+    "subtitle": "subtitles.fan",
+    "sounds": [
+      {
+        "name": "darkrp_stuff:fan",
+        "stream": false
+      }
+    ]
+  },
+  "methmixer_nofilter": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "darkrp_stuff:methmixerpchit",
+        "stream": false
+      }
+    ]
+  },
+  "methmixer_mixing": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "darkrp_stuff:methmixeractive",
+        "stream": false
+      }
+    ]
+  }
+}

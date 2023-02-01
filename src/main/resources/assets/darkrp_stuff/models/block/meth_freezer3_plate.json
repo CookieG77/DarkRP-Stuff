@@ -1,0 +1,8 @@
+{
+  "parent": "darkrp_stuff:custom/methfreezer",
+  "textures": {
+    "all": "darkrp_stuff:blocks/methfreezer3",
+    "particle": "darkrp_stuff:blocks/methfreezer3",
+    "0": "darkrp_stuff:blocks/methfreezer3"
+  }
+}

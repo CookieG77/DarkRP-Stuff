@@ -1,0 +1,8 @@
+{
+  "parent": "darkrp_stuff:custom/methylamine",
+  "textures": {
+    "all": "darkrp_stuff:blocks/methylamine",
+    "particle": "darkrp_stuff:blocks/methylamine",
+    "0": "darkrp_stuff:blocks/methylamine"
+  }
+}

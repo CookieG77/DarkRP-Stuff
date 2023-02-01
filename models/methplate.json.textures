@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "methplate0"
+      },
+      "name": "default"
+    },
+    "plate1": {
+      "map": {
+        "0": "methplate1"
+      },
+      "name": "plate1"
+    },
+    "plate2": {
+      "map": {
+        "0": "methplate2"
+      },
+      "name": "plate2"
+    }
+  }
+}

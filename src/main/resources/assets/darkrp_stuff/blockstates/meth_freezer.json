@@ -1,0 +1,93 @@
+{
+  "variants": {
+
+  	
+    "facing=north,nbplates=0": {
+      "model": "darkrp_stuff:block/meth_freezer0_plate"
+    },
+    "facing=east,nbplates=0": {
+      "model": "darkrp_stuff:block/meth_freezer0_plate",
+      "y": 90
+    },
+    "facing=south,nbplates=0": {
+      "model": "darkrp_stuff:block/meth_freezer0_plate",
+      "y": 180
+    },
+    "facing=west,nbplates=0": {
+      "model": "darkrp_stuff:block/meth_freezer0_plate",
+      "y": 270
+    },
+
+
+    
+    "facing=north,nbplates=1": {
+      "model": "darkrp_stuff:block/meth_freezer1_plate"
+    },
+    "facing=east,nbplates=1": {
+      "model": "darkrp_stuff:block/meth_freezer1_plate",
+      "y": 90
+    },
+    "facing=south,nbplates=1": {
+      "model": "darkrp_stuff:block/meth_freezer1_plate",
+      "y": 180
+    },
+    "facing=west,nbplates=1": {
+      "model": "darkrp_stuff:block/meth_freezer1_plate",
+      "y": 270
+    },
+
+
+
+    "facing=north,nbplates=2": {
+      "model": "darkrp_stuff:block/meth_freezer2_plate"
+    },
+    "facing=east,nbplates=2": {
+      "model": "darkrp_stuff:block/meth_freezer2_plate",
+      "y": 90
+    },
+    "facing=south,nbplates=2": {
+      "model": "darkrp_stuff:block/meth_freezer2_plate",
+      "y": 180
+    },
+    "facing=west,nbplates=2": {
+      "model": "darkrp_stuff:block/meth_freezer2_plate",
+      "y": 270
+    },
+
+
+
+    "facing=north,nbplates=3": {
+      "model": "darkrp_stuff:block/meth_freezer3_plate"
+    },
+    "facing=east,nbplates=3": {
+      "model": "darkrp_stuff:block/meth_freezer3_plate",
+      "y": 90
+    },
+    "facing=south,nbplates=3": {
+      "model": "darkrp_stuff:block/meth_freezer3_plate",
+      "y": 180
+    },
+    "facing=west,nbplates=3": {
+      "model": "darkrp_stuff:block/meth_freezer3_plate",
+      "y": 270
+    },
+
+
+
+	"facing=north,nbplates=4": {
+      "model": "darkrp_stuff:block/meth_freezer4_plate"
+    },
+    "facing=east,nbplates=4": {
+      "model": "darkrp_stuff:block/meth_freezer4_plate",
+      "y": 90
+    },
+    "facing=south,nbplates=4": {
+      "model": "darkrp_stuff:block/meth_freezer4_plate",
+      "y": 180
+    },
+    "facing=west,nbplates=4": {
+      "model": "darkrp_stuff:block/meth_freezer4_plate",
+      "y": 270
+    }
+  }
+}

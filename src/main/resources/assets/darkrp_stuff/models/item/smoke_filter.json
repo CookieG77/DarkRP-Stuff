@@ -1,0 +1,7 @@
+{
+  "parent": "darkrp_stuff:custom/methfilter",
+  "textures": {
+    "0": "darkrp_stuff:blocks/filter",
+    "particle": "darkrp_stuff:items/filter"
+  }
+}

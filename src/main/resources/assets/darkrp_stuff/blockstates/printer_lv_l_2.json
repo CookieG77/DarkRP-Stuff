@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "darkrp_stuff:block/printer_lv_l_2"
+    },
+    "facing=east": {
+      "model": "darkrp_stuff:block/printer_lv_l_2",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "darkrp_stuff:block/printer_lv_l_2",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "darkrp_stuff:block/printer_lv_l_2",
+      "y": 270
+    }
+  }
+}

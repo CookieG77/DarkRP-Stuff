@@ -1,0 +1,8 @@
+{
+  "parent": "darkrp_stuff:custom/moneyprinter2",
+  "textures": {
+    "all": "darkrp_stuff:blocks/moneyprintertexture",
+    "particle": "darkrp_stuff:blocks/moneyprintertexture",
+    "0": "darkrp_stuff:blocks/moneyprintertexture"
+  }
+}

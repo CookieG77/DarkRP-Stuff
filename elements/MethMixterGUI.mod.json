@@ -1,0 +1,277 @@
+{
+  "_fv": 33,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 180,
+    "height": 192,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 12,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 132,
+          "y": 49
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -6710887,
+            "falpha": 0.0
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 159,
+          "y": 49
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:SmokeFilter"
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 146,
+          "y": 80
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:Plate"
+          },
+          "color": {
+            "value": -3342337,
+            "falpha": 0.0
+          },
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #3",
+          "x": 218,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Mixeur Industriel",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Mixeur Industriel",
+          "x": 132,
+          "y": 31
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "methmixer_gui_off.png",
+          "use1Xscale": false,
+          "name": "methmixer_gui_off.png",
+          "x": 236,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "methmixer_gui_on_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifAnimation1"
+          },
+          "name": "methmixer_gui_on_1.png",
+          "x": 236,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "methmixer_gui_on_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifAnimation2"
+          },
+          "name": "methmixer_gui_on_2.png",
+          "x": 236,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "methmixer_gui_on_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifAnimation3"
+          },
+          "name": "methmixer_gui_on_3.png",
+          "x": 236,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "methmixer_gui_on_4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifAnimation4"
+          },
+          "name": "methmixer_gui_on_4.png",
+          "x": 236,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "methmixer_gui_on_5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifAnimation5"
+          },
+          "name": "methmixer_gui_on_5.png",
+          "x": 236,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "methmixer_gui_on_6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifAnimation6"
+          },
+          "name": "methmixer_gui_on_6.png",
+          "x": 236,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "methmixer_gui_on_7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifAnimation7"
+          },
+          "name": "methmixer_gui_on_7.png",
+          "x": 236,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "methmixer_gui_on_8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifAnimation8"
+          },
+          "name": "methmixer_gui_on_8.png",
+          "x": 236,
+          "y": 49
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Pureté : §l<BNBT:text:QualityInspect>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Pureté : §l<BNBT:text:QualityInspect>",
+          "x": 132,
+          "y": 112
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Avancement: <BNBT:text:FakeQuality>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Avancement: <BNBT:text:FakeQuality>",
+          "x": 132,
+          "y": 121
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "meth_mixter_gui_needfilter.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "NeedFilter"
+          },
+          "name": "meth_mixter_gui_needfilter.png",
+          "x": 138,
+          "y": 73
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Start",
+          "onClick": {
+            "name": "MethMixerStartMixing"
+          },
+          "width": 51,
+          "height": 20,
+          "name": "Start",
+          "x": 182,
+          "y": 49
+        }
+      }
+    ],
+    "onTick": {
+      "name": "MethMixterGUIPendantQueCeGUIEstOuvertParTick"
+    },
+    "gridSettings": {
+      "sx": 9,
+      "sy": 9,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}
