@@ -1050,7 +1050,34 @@ public class MethMixerMiseAJourDuTickProcedure {
 				return _retval.get();
 			}
 		}.getItemStack(new BlockPos(x, y, z), (int) (2))).getItem() == SmokeFilterItem.block) {
-			if (!(new Object() {
+			if (new Object() {
+				public boolean getValue(IWorld world, BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, new BlockPos(x, y, z), "ProcessFinished") && !((new Object() {
+				public ItemStack getItemStack(BlockPos pos, int sltid) {
+					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null) {
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							_retval.set(capability.getStackInSlot(sltid).copy());
+						});
+					}
+					return _retval.get();
+				}
+			}.getItemStack(new BlockPos(x, y, z), (int) (3))).getItem() == MethPlateCoolingItem.block)) {
+				{
+					int _value = 11;
+					BlockPos _pos = new BlockPos(x, y, z);
+					BlockState _bs = world.getBlockState(_pos);
+					Property<?> _property = _bs.getBlock().getStateContainer().getProperty("runningstate");
+					if (_property instanceof IntegerProperty && _property.getAllowedValues().contains(_value))
+						world.setBlockState(_pos, _bs.with((IntegerProperty) _property, _value), 3);
+				}
+			} else if (!(new Object() {
 				public boolean getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
@@ -1101,22 +1128,6 @@ public class MethMixerMiseAJourDuTickProcedure {
 			}.getValue(world, new BlockPos(x, y, z), "ProcessFinished"))) {
 				{
 					int _value = 1;
-					BlockPos _pos = new BlockPos(x, y, z);
-					BlockState _bs = world.getBlockState(_pos);
-					Property<?> _property = _bs.getBlock().getStateContainer().getProperty("runningstate");
-					if (_property instanceof IntegerProperty && _property.getAllowedValues().contains(_value))
-						world.setBlockState(_pos, _bs.with((IntegerProperty) _property, _value), 3);
-				}
-			} else if (new Object() {
-				public boolean getValue(IWorld world, BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getBoolean(tag);
-					return false;
-				}
-			}.getValue(world, new BlockPos(x, y, z), "ProcessFinished")) {
-				{
-					int _value = 11;
 					BlockPos _pos = new BlockPos(x, y, z);
 					BlockState _bs = world.getBlockState(_pos);
 					Property<?> _property = _bs.getBlock().getStateContainer().getProperty("runningstate");
@@ -1174,7 +1185,34 @@ public class MethMixerMiseAJourDuTickProcedure {
 				}
 			}
 		} else {
-			if (!(new Object() {
+			if (new Object() {
+				public boolean getValue(IWorld world, BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, new BlockPos(x, y, z), "ProcessFinished") && !((new Object() {
+				public ItemStack getItemStack(BlockPos pos, int sltid) {
+					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null) {
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							_retval.set(capability.getStackInSlot(sltid).copy());
+						});
+					}
+					return _retval.get();
+				}
+			}.getItemStack(new BlockPos(x, y, z), (int) (3))).getItem() == MethPlateCoolingItem.block)) {
+				{
+					int _value = 10;
+					BlockPos _pos = new BlockPos(x, y, z);
+					BlockState _bs = world.getBlockState(_pos);
+					Property<?> _property = _bs.getBlock().getStateContainer().getProperty("runningstate");
+					if (_property instanceof IntegerProperty && _property.getAllowedValues().contains(_value))
+						world.setBlockState(_pos, _bs.with((IntegerProperty) _property, _value), 3);
+				}
+			} else if (!(new Object() {
 				public boolean getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
@@ -1225,22 +1263,6 @@ public class MethMixerMiseAJourDuTickProcedure {
 			}.getValue(world, new BlockPos(x, y, z), "ProcessFinished"))) {
 				{
 					int _value = 0;
-					BlockPos _pos = new BlockPos(x, y, z);
-					BlockState _bs = world.getBlockState(_pos);
-					Property<?> _property = _bs.getBlock().getStateContainer().getProperty("runningstate");
-					if (_property instanceof IntegerProperty && _property.getAllowedValues().contains(_value))
-						world.setBlockState(_pos, _bs.with((IntegerProperty) _property, _value), 3);
-				}
-			} else if (new Object() {
-				public boolean getValue(IWorld world, BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getBoolean(tag);
-					return false;
-				}
-			}.getValue(world, new BlockPos(x, y, z), "ProcessFinished")) {
-				{
-					int _value = 10;
 					BlockPos _pos = new BlockPos(x, y, z);
 					BlockState _bs = world.getBlockState(_pos);
 					Property<?> _property = _bs.getBlock().getStateContainer().getProperty("runningstate");

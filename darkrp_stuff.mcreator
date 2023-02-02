@@ -53,57 +53,6 @@
       "path": "~/fonctions"
     },
     {
-      "name": "PrinterCount1",
-      "type": "procedure",
-      "sortid": 15,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "printer_count_1",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/fonctions"
-    },
-    {
-      "name": "PrinterCount2",
-      "type": "procedure",
-      "sortid": 16,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "printer_count_2",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/fonctions"
-    },
-    {
-      "name": "PrinterCount3",
-      "type": "procedure",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "printer_count_3",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/fonctions"
-    },
-    {
       "name": "PrinterAddMoney1",
       "type": "procedure",
       "sortid": 19,
@@ -1109,24 +1058,6 @@
   "variable_elements": [
     {
       "name": "modtick",
-      "type": "number",
-      "scope": "map",
-      "value": "0"
-    },
-    {
-      "name": "printer1",
-      "type": "number",
-      "scope": "map",
-      "value": "0"
-    },
-    {
-      "name": "printer2",
-      "type": "number",
-      "scope": "map",
-      "value": "0"
-    },
-    {
-      "name": "printer3",
       "type": "number",
       "scope": "map",
       "value": "0"

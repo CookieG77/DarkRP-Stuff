@@ -109,9 +109,6 @@ public class DarkrpStuffModVariables {
 	public static class MapVariables extends WorldSavedData {
 		public static final String DATA_NAME = "darkrp_stuff_mapvars";
 		public double modtick = 0;
-		public double printer1 = 0;
-		public double printer2 = 0;
-		public double printer3 = 0;
 
 		public MapVariables() {
 			super(DATA_NAME);
@@ -124,17 +121,11 @@ public class DarkrpStuffModVariables {
 		@Override
 		public void read(CompoundNBT nbt) {
 			modtick = nbt.getDouble("modtick");
-			printer1 = nbt.getDouble("printer1");
-			printer2 = nbt.getDouble("printer2");
-			printer3 = nbt.getDouble("printer3");
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT nbt) {
 			nbt.putDouble("modtick", modtick);
-			nbt.putDouble("printer1", printer1);
-			nbt.putDouble("printer2", printer2);
-			nbt.putDouble("printer3", printer3);
 			return nbt;
 		}
 

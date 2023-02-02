@@ -104,19 +104,19 @@ public class MethCrate3Block extends DarkrpStuffModElements.ModElement {
 			switch ((Direction) state.get(FACING)) {
 				case SOUTH :
 				default :
-					return VoxelShapes.or(makeCuboidShape(15, 0, 16, 1, 8, 0))
+					return VoxelShapes.or(makeCuboidShape(16, 0, 15, 0, 8, 1))
 
 							.withOffset(offset.x, offset.y, offset.z);
 				case NORTH :
-					return VoxelShapes.or(makeCuboidShape(1, 0, 0, 15, 8, 16))
+					return VoxelShapes.or(makeCuboidShape(0, 0, 1, 16, 8, 15))
 
 							.withOffset(offset.x, offset.y, offset.z);
 				case EAST :
-					return VoxelShapes.or(makeCuboidShape(16, 0, 1, 0, 8, 15))
+					return VoxelShapes.or(makeCuboidShape(15, 0, 0, 1, 8, 16))
 
 							.withOffset(offset.x, offset.y, offset.z);
 				case WEST :
-					return VoxelShapes.or(makeCuboidShape(0, 0, 15, 16, 8, 1))
+					return VoxelShapes.or(makeCuboidShape(1, 0, 16, 15, 8, 0))
 
 							.withOffset(offset.x, offset.y, offset.z);
 			}
