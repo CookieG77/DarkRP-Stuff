@@ -76,7 +76,7 @@ public class MethPlateCoolingShowInfosProcedure {
 			tooltip.add(new StringTextComponent(advancementstring));
 		}
 		if (SmokeFilterItem.block == itemstack.getItem() && Screen.hasShiftDown()) {
-			advancement = Math.floor((1250 - itemstack.getOrCreateTag().getDouble("FakeDurability")) / 1250);
+			advancement = Math.floor((1250 - itemstack.getOrCreateTag().getDouble("FakeDurability")) / 125);
 			advancementstring = "\u00A77\u00A7l[\u00A7r";
 			if (advancement > 6) {
 				advancementstring = (advancementstring + "\u00A72");
