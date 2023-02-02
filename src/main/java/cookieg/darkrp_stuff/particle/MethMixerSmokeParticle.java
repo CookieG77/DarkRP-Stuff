@@ -60,7 +60,7 @@ public class MethMixerSmokeParticle {
 		public void tick() {
 			super.tick();
 			if (!this.isExpired) {
-				this.setSprite(this.spriteSet.get((this.age / 6) % 11 + 1, 11));
+				this.setSprite(this.spriteSet.get((this.age / 6) % 1 + 1, 1));
 			}
 		}
 	}
