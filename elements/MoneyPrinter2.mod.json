@@ -112,6 +112,19 @@
           "x": 239,
           "y": 73
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<BNBT:text:Advancement>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<BNBT:text:Advancement>",
+          "x": 132,
+          "y": 98
+        }
       }
     ],
     "gridSettings": {
@@ -119,7 +132,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

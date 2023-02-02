@@ -48,6 +48,8 @@ public class PrinterAddMoney2Procedure {
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+		double advancement = 0;
+		String advancementstring = "";
 		if (DarkrpStuffModVariables.MapVariables.get(world).modtick == 0 && new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -55,7 +57,7 @@ public class PrinterAddMoney2Procedure {
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(x, y, z), "Timer") == 300) {
+		}.getValue(world, new BlockPos(x, y, z), "Timer") == 600) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -205,6 +207,39 @@ public class PrinterAddMoney2Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+		}
+		advancement = Math.round((new Object() {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return -1;
+			}
+		}.getValue(world, new BlockPos(x, y, z), "Timer")) / 120);
+		advancementstring = "\u00A77\u00A7l[\u00A7r";
+		if (advancement > 6) {
+			advancementstring = (advancementstring + "\u00A72");
+		} else if (advancement > 3) {
+			advancementstring = (advancementstring + "\u00A76");
+		} else {
+			advancementstring = (advancementstring + "\u00A74");
+		}
+		for (int index0 = 0; index0 < (int) (advancement); index0++) {
+			advancementstring = (advancementstring + "\u2588");
+		}
+		advancementstring = (advancementstring + "\u00A78");
+		for (int index1 = 0; index1 < (int) (10 - advancement); index1++) {
+			advancementstring = (advancementstring + "\u2592");
+		}
+		advancementstring = (advancementstring + "\u00A77\u00A7l]\u00A7r");
+		if (!world.isRemote()) {
+			BlockPos _bp = new BlockPos(x, y, z);
+			TileEntity _tileEntity = world.getTileEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_tileEntity != null)
+				_tileEntity.getTileData().putString("Advancement", advancementstring);
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 	}
 }

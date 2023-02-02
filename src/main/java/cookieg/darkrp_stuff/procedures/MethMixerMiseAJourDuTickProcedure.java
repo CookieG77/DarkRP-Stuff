@@ -181,7 +181,7 @@ public class MethMixerMiseAJourDuTickProcedure {
 							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
 				}
-				if ((Filtre).getOrCreateTag().getDouble("FakeDurability") >= 450) {
+				if ((Filtre).getOrCreateTag().getDouble("FakeDurability") >= 1250) {
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
 						if (_ent != null) {
@@ -217,7 +217,7 @@ public class MethMixerMiseAJourDuTickProcedure {
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos(x, y, z), "Cooking") != 600) {
+			}.getValue(world, new BlockPos(x, y, z), "Cooking") != 1000) {
 				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos(x, y, z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -364,7 +364,7 @@ public class MethMixerMiseAJourDuTickProcedure {
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos(x, y, z), "Cooking") == 150) {
+			}.getValue(world, new BlockPos(x, y, z), "Cooking") == 250) {
 				if ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -413,7 +413,7 @@ public class MethMixerMiseAJourDuTickProcedure {
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos(x, y, z), "Cooking") == 300) {
+			}.getValue(world, new BlockPos(x, y, z), "Cooking") == 500) {
 				if ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -462,7 +462,7 @@ public class MethMixerMiseAJourDuTickProcedure {
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos(x, y, z), "Cooking") == 450) {
+			}.getValue(world, new BlockPos(x, y, z), "Cooking") == 750) {
 				if ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -626,7 +626,7 @@ public class MethMixerMiseAJourDuTickProcedure {
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos(x, y, z), "Cooking")) / 60);
+			}.getValue(world, new BlockPos(x, y, z), "Cooking")) / 100);
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);

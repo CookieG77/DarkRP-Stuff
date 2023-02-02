@@ -6,7 +6,9 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
@@ -76,6 +78,14 @@ public class MoneyPrinter3GuiWindow extends ContainerScreen<MoneyPrinter3Gui.Gui
 		this.font.drawString(ms, "Imprimante d'argent Lvl-3", 4, 5, -12829636);
 		this.font.drawString(ms, "Encre", 56, 25, -13421773);
 		this.font.drawString(ms, "Papier", 17, 25, -1);
+		this.font.drawString(ms, "" + (new Object() {
+			public String getValue(BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getString(tag);
+				return "";
+			}
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Advancement")) + "", 6, 61, -12829636);
 	}
 
 	@Override
