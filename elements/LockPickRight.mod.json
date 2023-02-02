@@ -1,0 +1,12 @@
+{
+  "_fv": 33,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "D",
+    "keyBindingName": "Lockpick : Tourner vers la droite",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "LockPickRightToucheEnfoncee"
+    }
+  }
+}

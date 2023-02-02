@@ -1053,6 +1053,434 @@
         ]
       },
       "path": "~/Drogues/Meth"
+    },
+    {
+      "name": "Lockpick",
+      "type": "item",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lockpick",
+      "path": "~/item/lockpick"
+    },
+    {
+      "name": "LockpickLorsqueVousCliquezAvecLeBoutonDroitDeLaSourisSurUnBloc",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lockpick_lorsque_vous_cliquez_avec_le_bouton_droit_de_la_souris_sur_un_bloc",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/lockpick"
+    },
+    {
+      "name": "IsLockpicking",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_lockpicking",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick"
+    },
+    {
+      "name": "LockPickLeft",
+      "type": "keybind",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lock_pick_left",
+      "path": "~/item/lockpick"
+    },
+    {
+      "name": "LockPickRight",
+      "type": "keybind",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lock_pick_right",
+      "path": "~/item/lockpick"
+    },
+    {
+      "name": "LockPickRightToucheEnfoncee",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lock_pick_right_touche_enfoncee",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick"
+    },
+    {
+      "name": "LockPickLeftToucheEnfoncee",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lock_pick_left_touche_enfoncee",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick"
+    },
+    {
+      "name": "LockpickOverlay",
+      "type": "overlay",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lockpick_overlay",
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "LockpickOverlayAfficherLoverlayEnJeu",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lockpick_overlay_afficher_loverlay_en_jeu",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "Veriflockn6",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriflockn_6",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "Veriflockn5",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriflockn_5",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "Veriflockn4",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriflockn_4",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "Veriflockn3",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriflockn_3",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "Veriflockn2",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriflockn_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "Veriflockn1",
+      "type": "procedure",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriflockn_1",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "Veriflock0",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriflock_0",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "Veriflock1",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriflock_1",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "Veriflock2",
+      "type": "procedure",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriflock_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "Veriflock3",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriflock_3",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "Veriflock4",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriflock_4",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "Veriflock5",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriflock_5",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "Veriflock6",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriflock_6",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "Unlock",
+      "type": "command",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlock",
+      "path": "~/item/lockpick/commandlockpick"
+    },
+    {
+      "name": "UnlockProcedure",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlock_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/commandlockpick"
+    },
+    {
+      "name": "StopLockpick",
+      "type": "command",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_lockpick",
+      "path": "~/item/lockpick/commandlockpick"
+    },
+    {
+      "name": "StopLockpickingProcedure",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_lockpicking_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/commandlockpick"
     }
   ],
   "variable_elements": [
@@ -1073,6 +1501,18 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "\"NA\""
+    },
+    {
+      "name": "Lockpicking",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "Lockpick_position",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -1113,6 +1553,7 @@
     "en_us": {
       "block.moneyprinter.printer_lvl_1": "Printer Niveau 1",
       "item.darkrp_stuff.meth_plate_cooling": "Plateau de Meth Liquide",
+      "item.darkrp_stuff.lockpick": "Lockpick",
       "item.darkrp_stuff.smoke_filter": "Filtre à air",
       "subtitles.moneyclick": "money printer click when money pop",
       "block.darkrp_stuff.printer_lvl_1": "Printer Niveau 1",
@@ -1133,11 +1574,13 @@
       "subtitles.fan": "bruit ventilateur d\u0027imprimente à argent",
       "block.darkrp_stuff.meth_crate_5": "Caisse de Meth",
       "block.darkrp_stuff.meth_crate": "Caisse de Meth",
+      "key.darkrp_stuff.lock_pick_right": "Lockpick : Tourner vers la droite",
       "item.darkrp_stuff.plate": "Plateau d\u0027aluminium",
       "block.darkrp_stuff.meth_mixer": "Mélanger Industriel",
       "item.darkrp_stuff.meth_plate": "Plateau de Meth",
       "item.moneyprinter.dirty_money_3": "Gros Paquet d\u0027Argent Salle",
       "block.darkrp_stuff.metylamine_barrel": "Barril de Metylamine",
+      "key.darkrp_stuff.lock_pick_left": "Lockpick : Tourner vers la gauche",
       "item.moneyprinter.dirty_money_1": "Argent Salle",
       "item.moneyprinter.dirty_money_2": "Paquet d\u0027Argent Salle",
       "block.moneyprinter.printer_lv_l_2": "Printer Niveau 2",
@@ -1157,7 +1600,21 @@
       },
       {
         "name": "item",
-        "children": []
+        "children": [
+          {
+            "name": "lockpick",
+            "children": [
+              {
+                "name": "LockpickOverlayConditions",
+                "children": []
+              },
+              {
+                "name": "commandlockpick",
+                "children": []
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "commands",

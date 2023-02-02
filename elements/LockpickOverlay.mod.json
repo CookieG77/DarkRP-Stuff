@@ -1,0 +1,190 @@
+{
+  "_fv": 33,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "lockpick-6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Veriflockn6"
+          },
+          "name": "lockpick-6.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lockpick-5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Veriflockn5"
+          },
+          "name": "lockpick-5.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lockpick-4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Veriflockn4"
+          },
+          "name": "lockpick-4.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lockpick-3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Veriflockn3"
+          },
+          "name": "lockpick-3.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lockpick-2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Veriflockn2"
+          },
+          "name": "lockpick-2.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lockpick-1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Veriflockn1"
+          },
+          "name": "lockpick-1.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lockpick0.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Veriflock0"
+          },
+          "name": "lockpick0.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lockpick1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Veriflock1"
+          },
+          "name": "lockpick1.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lockpick2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Veriflock2"
+          },
+          "name": "lockpick2.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lockpick3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Veriflock3"
+          },
+          "name": "lockpick3.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lockpick4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Veriflock4"
+          },
+          "name": "lockpick4.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lockpick5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Veriflock5"
+          },
+          "name": "lockpick5.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lockpick6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Veriflock6"
+          },
+          "name": "lockpick6.png",
+          "x": 150,
+          "y": 56
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "LockpickOverlayAfficherLoverlayEnJeu"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 19,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

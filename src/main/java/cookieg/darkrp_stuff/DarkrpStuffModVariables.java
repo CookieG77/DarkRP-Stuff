@@ -217,6 +217,8 @@ public class DarkrpStuffModVariables {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putDouble("AnimationGUI", instance.AnimationGUI);
 			nbt.putString("MethMixerInfo1", instance.MethMixerInfo1);
+			nbt.putBoolean("Lockpicking", instance.Lockpicking);
+			nbt.putDouble("Lockpick_position", instance.Lockpick_position);
 			return nbt;
 		}
 
@@ -225,12 +227,16 @@ public class DarkrpStuffModVariables {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.AnimationGUI = nbt.getDouble("AnimationGUI");
 			instance.MethMixerInfo1 = nbt.getString("MethMixerInfo1");
+			instance.Lockpicking = nbt.getBoolean("Lockpicking");
+			instance.Lockpick_position = nbt.getDouble("Lockpick_position");
 		}
 	}
 
 	public static class PlayerVariables {
 		public double AnimationGUI = 0.0;
 		public String MethMixerInfo1 = "\"NA\"";
+		public boolean Lockpicking = false;
+		public double Lockpick_position = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -268,6 +274,8 @@ public class DarkrpStuffModVariables {
 		clone.AnimationGUI = original.AnimationGUI;
 		clone.MethMixerInfo1 = original.MethMixerInfo1;
 		if (!event.isWasDeath()) {
+			clone.Lockpicking = original.Lockpicking;
+			clone.Lockpick_position = original.Lockpick_position;
 		}
 	}
 
@@ -295,6 +303,8 @@ public class DarkrpStuffModVariables {
 							.orElse(new PlayerVariables()));
 					variables.AnimationGUI = message.data.AnimationGUI;
 					variables.MethMixerInfo1 = message.data.MethMixerInfo1;
+					variables.Lockpicking = message.data.Lockpicking;
+					variables.Lockpick_position = message.data.Lockpick_position;
 				}
 			});
 			context.setPacketHandled(true);

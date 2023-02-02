@@ -1,0 +1,7 @@
+{
+  "parent": "darkrp_stuff:custom/lockpick",
+  "textures": {
+    "0": "darkrp_stuff:blocks/lockpick",
+    "particle": "darkrp_stuff:items/lockpick"
+  }
+}

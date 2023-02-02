@@ -1,0 +1,12 @@
+{
+  "_fv": 33,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "A",
+    "keyBindingName": "Lockpick : Tourner vers la gauche",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "LockPickLeftToucheEnfoncee"
+    }
+  }
+}
