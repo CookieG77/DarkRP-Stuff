@@ -14,7 +14,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "CUSTOM:MetylamineBarrel"
           },
           "color": {
             "value": -256,
@@ -32,7 +32,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "CUSTOM:AluminiumCrateOpened"
           },
           "color": {
             "value": -6710887,

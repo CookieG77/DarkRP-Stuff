@@ -1,0 +1,46 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "methcrate0"
+      },
+      "name": "default"
+    },
+    "bag4": {
+      "map": {
+        "1": "methcrate4"
+      },
+      "name": "bag4"
+    },
+    "bag5": {
+      "map": {
+        "1": "methcrate5"
+      },
+      "name": "bag5"
+    },
+    "bag2": {
+      "map": {
+        "1": "methcrate2"
+      },
+      "name": "bag2"
+    },
+    "bag3": {
+      "map": {
+        "1": "methcrate3"
+      },
+      "name": "bag3"
+    },
+    "bag1": {
+      "map": {
+        "1": "methcrate1"
+      },
+      "name": "bag1"
+    },
+    "bag6": {
+      "map": {
+        "1": "methcrate6"
+      },
+      "name": "bag6"
+    }
+  }
+}

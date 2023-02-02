@@ -27,7 +27,7 @@ public class PlateItem extends DarkrpStuffModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(DarkRPStuffItemGroup.tab).maxStackSize(1).rarity(Rarity.UNCOMMON));
+			super(new Item.Properties().group(DarkRPStuffItemGroup.tab).maxStackSize(16).rarity(Rarity.UNCOMMON));
 			setRegistryName("plate");
 		}
 

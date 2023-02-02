@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "darkrp_stuff:block/aluminium_crate_closed"
+    },
+    "facing=east": {
+      "model": "darkrp_stuff:block/aluminium_crate_closed",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "darkrp_stuff:block/aluminium_crate_closed",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "darkrp_stuff:block/aluminium_crate_closed",
+      "y": 270
+    }
+  }
+}

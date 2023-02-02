@@ -1,0 +1,7 @@
+{
+  "parent": "darkrp_stuff:custom/methbag",
+  "textures": {
+    "0": "darkrp_stuff:blocks/methbag",
+    "particle": "darkrp_stuff:items/methbag"
+  }
+}

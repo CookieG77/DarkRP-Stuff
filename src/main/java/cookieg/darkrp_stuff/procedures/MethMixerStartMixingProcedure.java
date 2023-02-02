@@ -7,13 +7,13 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Map;
 
 import cookieg.darkrp_stuff.block.MetylamineBarrelBlock;
+import cookieg.darkrp_stuff.block.AluminiumCrateOpenedBlock;
 import cookieg.darkrp_stuff.DarkrpStuffMod;
 
 public class MethMixerStartMixingProcedure {
@@ -79,7 +79,7 @@ public class MethMixerStartMixingProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos(x, y, z), (int) (1))).getItem() == Blocks.OAK_LOG.asItem()) {
+		}.getItemStack(new BlockPos(x, y, z), (int) (1))).getItem() == AluminiumCrateOpenedBlock.block.asItem()) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);

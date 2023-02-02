@@ -40,6 +40,8 @@ import cookieg.darkrp_stuff.procedures.MethMixterGUIPendantQueCeGUIEstOuvertParT
 import cookieg.darkrp_stuff.procedures.MethMixerStartMixingProcedure;
 import cookieg.darkrp_stuff.item.SmokeFilterItem;
 import cookieg.darkrp_stuff.item.PlateItem;
+import cookieg.darkrp_stuff.block.MetylamineBarrelBlock;
+import cookieg.darkrp_stuff.block.AluminiumCrateOpenedBlock;
 import cookieg.darkrp_stuff.DarkrpStuffModElements;
 import cookieg.darkrp_stuff.DarkrpStuffMod;
 
@@ -143,8 +145,16 @@ public class MethMixterGUIGui extends DarkrpStuffModElements.ModElement {
 				}
 			}
 			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 9, 26) {
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return (MetylamineBarrelBlock.block.asItem() == stack.getItem());
+				}
 			}));
 			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 36, 26) {
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return (AluminiumCrateOpenedBlock.block.asItem() == stack.getItem());
+				}
 			}));
 			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 23, 57) {
 				@Override

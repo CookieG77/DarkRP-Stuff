@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "aluminiumcrateclosed"
+      },
+      "name": "default"
+    },
+    "open": {
+      "map": {
+        "1": "aluminiumcrate"
+      },
+      "name": "open"
+    }
+  }
+}

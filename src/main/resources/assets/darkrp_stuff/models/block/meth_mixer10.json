@@ -1,0 +1,8 @@
+{
+  "parent": "darkrp_stuff:custom/methmixer",
+  "textures": {
+    "all": "darkrp_stuff:blocks/MethMixerInProcessFinished",
+    "particle": "darkrp_stuff:blocks/MethMixerInProcessFinished",
+    "9": "darkrp_stuff:blocks/MethMixerInProcessFinished"
+  }
+}

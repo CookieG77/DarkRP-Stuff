@@ -183,6 +183,44 @@
     "facing=west,runningstate=9": {
       "model": "darkrp_stuff:block/meth_mixer9",
       "y": 270
+    },
+
+
+
+
+	"facing=north,runningstate=10": {
+      "model": "darkrp_stuff:block/meth_mixer10"
+    },
+    "facing=east,runningstate=10": {
+      "model": "darkrp_stuff:block/meth_mixer10",
+      "y": 90
+    },
+    "facing=south,runningstate=10": {
+      "model": "darkrp_stuff:block/meth_mixer10",
+      "y": 180
+    },
+    "facing=west,runningstate=10": {
+      "model": "darkrp_stuff:block/meth_mixer10",
+      "y": 270
+    },
+
+
+
+
+	"facing=north,runningstate=11": {
+      "model": "darkrp_stuff:block/meth_mixer11"
+    },
+    "facing=east,runningstate=11": {
+      "model": "darkrp_stuff:block/meth_mixer11",
+      "y": 90
+    },
+    "facing=south,runningstate=11": {
+      "model": "darkrp_stuff:block/meth_mixer11",
+      "y": 180
+    },
+    "facing=west,runningstate=11": {
+      "model": "darkrp_stuff:block/meth_mixer11",
+      "y": 270
     }
   }
 }

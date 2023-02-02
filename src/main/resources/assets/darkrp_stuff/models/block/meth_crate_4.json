@@ -1,0 +1,8 @@
+{
+  "parent": "darkrp_stuff:custom/methcrate",
+  "textures": {
+    "all": "darkrp_stuff:blocks/methcrate4",
+    "particle": "darkrp_stuff:blocks/methcrate4",
+    "1": "darkrp_stuff:blocks/methcrate4"
+  }
+}
