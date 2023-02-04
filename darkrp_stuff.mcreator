@@ -2038,10 +2038,6 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "itemstack",
             "type": "itemstack"
           },
@@ -2077,6 +2073,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -2237,7 +2249,7 @@
       "block.moneyprinter.printer_lv_l_2": "Printer Niveau 2",
       "block.moneyprinter.printer_lv_l_3": "Printer Niveau 3",
       "subtitles.lockpick_open": "",
-      "item.darkrp_stuff.lockable_iron_door": "Porte en fer vérouillée",
+      "item.darkrp_stuff.lockable_iron_door": "Porte en fer verrouillée",
       "subtitles.methmixer": "",
       "item.darkrp_stuff.door_key": "Clé de porte",
       "item.darkrp_stuff.meth_plate_cooling": "Plateau de Meth Liquide",

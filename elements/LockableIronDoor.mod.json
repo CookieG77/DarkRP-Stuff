@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "iron_door",
     "customModelName": "Normal",
-    "name": "Porte en fer vérouillée",
+    "name": "Porte en fer verrouillée",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:DarkRPStuff"
