@@ -31,6 +31,13 @@ import cookieg.darkrp_stuff.procedures.Veriflock3Procedure;
 import cookieg.darkrp_stuff.procedures.Veriflock2Procedure;
 import cookieg.darkrp_stuff.procedures.Veriflock1Procedure;
 import cookieg.darkrp_stuff.procedures.Veriflock0Procedure;
+import cookieg.darkrp_stuff.procedures.VerifVerrou6Procedure;
+import cookieg.darkrp_stuff.procedures.VerifVerrou5Procedure;
+import cookieg.darkrp_stuff.procedures.VerifVerrou4Procedure;
+import cookieg.darkrp_stuff.procedures.VerifVerrou3Procedure;
+import cookieg.darkrp_stuff.procedures.VerifVerrou2Procedure;
+import cookieg.darkrp_stuff.procedures.VerifVerrou1Procedure;
+import cookieg.darkrp_stuff.procedures.VerifVerrou0Procedure;
 import cookieg.darkrp_stuff.procedures.LockpickOverlayAfficherLoverlayEnJeuProcedure;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -69,6 +76,41 @@ public class LockpickOverlayOverlay {
 			RenderSystem.disableAlphaTest();
 			if (LockpickOverlayAfficherLoverlayEnJeuProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
+				if (VerifVerrou0Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
+					Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("darkrp_stuff:textures/screens/lock0.png"));
+					Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -63, posY + -64, 0, 0, 128, 128, 128, 128);
+				}
+				if (VerifVerrou1Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
+					Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("darkrp_stuff:textures/screens/lock1.png"));
+					Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -63, posY + -64, 0, 0, 128, 128, 128, 128);
+				}
+				if (VerifVerrou2Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
+					Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("darkrp_stuff:textures/screens/lock2.png"));
+					Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -63, posY + -64, 0, 0, 128, 128, 128, 128);
+				}
+				if (VerifVerrou3Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
+					Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("darkrp_stuff:textures/screens/lock3.png"));
+					Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -63, posY + -64, 0, 0, 128, 128, 128, 128);
+				}
+				if (VerifVerrou4Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
+					Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("darkrp_stuff:textures/screens/lock4.png"));
+					Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -63, posY + -64, 0, 0, 128, 128, 128, 128);
+				}
+				if (VerifVerrou5Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
+					Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("darkrp_stuff:textures/screens/lock5.png"));
+					Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -63, posY + -64, 0, 0, 128, 128, 128, 128);
+				}
+				if (VerifVerrou6Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
+					Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("darkrp_stuff:textures/screens/lock6.png"));
+					Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -63, posY + -64, 0, 0, 128, 128, 128, 128);
+				}
 				if (Veriflockn6Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
 					Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("darkrp_stuff:textures/screens/lockpick-6.png"));

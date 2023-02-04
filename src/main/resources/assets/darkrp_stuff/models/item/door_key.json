@@ -1,0 +1,7 @@
+{
+  "parent": "darkrp_stuff:custom/doorkey",
+  "textures": {
+    "0": "darkrp_stuff:blocks/doorkey",
+    "particle": "darkrp_stuff:items/doorkey"
+  }
+}

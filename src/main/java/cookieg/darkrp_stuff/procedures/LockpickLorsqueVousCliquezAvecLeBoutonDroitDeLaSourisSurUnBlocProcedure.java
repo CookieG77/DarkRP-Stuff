@@ -1,18 +1,20 @@
 package cookieg.darkrp_stuff.procedures;
 
-import net.minecraftforge.fml.server.ServerLifecycleHooks;
-
 import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ChatType;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Util;
-import net.minecraft.server.MinecraftServer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.entity.Entity;
-import net.minecraft.block.Blocks;
 
 import java.util.Map;
 
+import cookieg.darkrp_stuff.block.LockableIronDoorTopOpenBlock;
+import cookieg.darkrp_stuff.block.LockableIronDoorTopClosedBlock;
+import cookieg.darkrp_stuff.block.LockableIronDoorBottomOpenBlock;
+import cookieg.darkrp_stuff.block.LockableIronDoorBottomClosedBlock;
+import cookieg.darkrp_stuff.block.AltLockableIronDoorTopOpenBlock;
+import cookieg.darkrp_stuff.block.AltLockableIronDoorTopClosedBlock;
+import cookieg.darkrp_stuff.block.AltLockableIronDoorBottomOpenBlock;
+import cookieg.darkrp_stuff.block.AltLockableIronDoorBottomClosedBlock;
 import cookieg.darkrp_stuff.DarkrpStuffModVariables;
 import cookieg.darkrp_stuff.DarkrpStuffMod;
 
@@ -49,17 +51,26 @@ public class LockpickLorsqueVousCliquezAvecLeBoutonDroitDeLaSourisSurUnBlocProce
 						.warn("Failed to load dependency entity for procedure LockpickLorsqueVousCliquezAvecLeBoutonDroitDeLaSourisSurUnBloc!");
 			return;
 		}
+		if (dependencies.get("itemstack") == null) {
+			if (!dependencies.containsKey("itemstack"))
+				DarkrpStuffMod.LOGGER
+						.warn("Failed to load dependency itemstack for procedure LockpickLorsqueVousCliquezAvecLeBoutonDroitDeLaSourisSurUnBloc!");
+			return;
+		}
 		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.IRON_DOOR) {
-			if (!world.isRemote()) {
-				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-				if (mcserv != null)
-					mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Test"), ChatType.SYSTEM, Util.DUMMY_UUID);
-			}
+		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
+		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == LockableIronDoorBottomClosedBlock.block
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == LockableIronDoorTopClosedBlock.block
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == LockableIronDoorBottomOpenBlock.block
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == LockableIronDoorTopOpenBlock.block
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == AltLockableIronDoorBottomClosedBlock.block
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == AltLockableIronDoorTopClosedBlock.block
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == AltLockableIronDoorBottomOpenBlock.block
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == AltLockableIronDoorTopOpenBlock.block) {
 			if ((entity.getCapability(DarkrpStuffModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new DarkrpStuffModVariables.PlayerVariables())).Lockpicking) {
 				{
@@ -68,15 +79,6 @@ public class LockpickLorsqueVousCliquezAvecLeBoutonDroitDeLaSourisSurUnBlocProce
 						capability.Lockpicking = _setval;
 						capability.syncPlayerVariables(entity);
 					});
-				}
-				if (!world.isRemote()) {
-					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(
-								new StringTextComponent(("R\u00E9sultat : "
-										+ Math.round((entity.getCapability(DarkrpStuffModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-												.orElse(new DarkrpStuffModVariables.PlayerVariables())).Lockpick_position))),
-								ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			} else {
 				{
@@ -87,12 +89,29 @@ public class LockpickLorsqueVousCliquezAvecLeBoutonDroitDeLaSourisSurUnBlocProce
 					});
 				}
 				{
+					boolean _setval = (false);
+					entity.getCapability(DarkrpStuffModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.TurningLock = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
 					double _setval = 0;
 					entity.getCapability(DarkrpStuffModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.Lockpick_position = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = 0;
+					entity.getCapability(DarkrpStuffModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.AnimationGUI = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				itemstack.getOrCreateTag().putDouble("X", x);
+				itemstack.getOrCreateTag().putDouble("Y", y);
+				itemstack.getOrCreateTag().putDouble("Z", z);
 			}
 		}
 	}

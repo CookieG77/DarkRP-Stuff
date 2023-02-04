@@ -7,6 +7,97 @@
       {
         "type": "image",
         "data": {
+          "image": "lock0.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifVerrou0"
+          },
+          "name": "lock0.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lock1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifVerrou1"
+          },
+          "name": "lock1.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lock2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifVerrou2"
+          },
+          "name": "lock2.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lock3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifVerrou3"
+          },
+          "name": "lock3.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lock4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifVerrou4"
+          },
+          "name": "lock4.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lock5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifVerrou5"
+          },
+          "name": "lock5.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lock6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "VerifVerrou6"
+          },
+          "name": "lock6.png",
+          "x": 150,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
           "image": "lockpick-6.png",
           "use1Xscale": false,
           "displayCondition": {

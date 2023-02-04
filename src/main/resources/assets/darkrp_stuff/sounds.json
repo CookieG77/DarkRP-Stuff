@@ -36,5 +36,59 @@
         "stream": false
       }
     ]
+  },
+  "lockpick_break": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "darkrp_stuff:this-mod-is-a-mistake......_",
+        "stream": false
+      }
+    ]
+  },
+  "lockpick_moov1": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "darkrp_stuff:lockpickmoov1_1",
+        "stream": false
+      }
+    ]
+  },
+  "lockpick_moov2": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "darkrp_stuff:lockpickmoov2",
+        "stream": false
+      }
+    ]
+  },
+  "lockpick_moov3": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "darkrp_stuff:lockpickmoov3_1",
+        "stream": false
+      }
+    ]
+  },
+  "lockpick_moov4": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "darkrp_stuff:lockpickmoov4",
+        "stream": false
+      }
+    ]
+  },
+  "lockpick_open": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "darkrp_stuff:lockpickopen",
+        "stream": false
+      }
+    ]
   }
 }

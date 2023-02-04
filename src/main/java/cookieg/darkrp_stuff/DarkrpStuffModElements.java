@@ -54,6 +54,18 @@ public class DarkrpStuffModElements {
 				new net.minecraft.util.SoundEvent(new ResourceLocation("darkrp_stuff", "methmixer_nofilter")));
 		sounds.put(new ResourceLocation("darkrp_stuff", "methmixer_mixing"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("darkrp_stuff", "methmixer_mixing")));
+		sounds.put(new ResourceLocation("darkrp_stuff", "lockpick_break"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("darkrp_stuff", "lockpick_break")));
+		sounds.put(new ResourceLocation("darkrp_stuff", "lockpick_moov1"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("darkrp_stuff", "lockpick_moov1")));
+		sounds.put(new ResourceLocation("darkrp_stuff", "lockpick_moov2"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("darkrp_stuff", "lockpick_moov2")));
+		sounds.put(new ResourceLocation("darkrp_stuff", "lockpick_moov3"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("darkrp_stuff", "lockpick_moov3")));
+		sounds.put(new ResourceLocation("darkrp_stuff", "lockpick_moov4"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("darkrp_stuff", "lockpick_moov4")));
+		sounds.put(new ResourceLocation("darkrp_stuff", "lockpick_open"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("darkrp_stuff", "lockpick_open")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("darkrp_stuff").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

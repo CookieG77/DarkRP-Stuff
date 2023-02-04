@@ -1,0 +1,7 @@
+{
+  "parent": "darkrp_stuff:custom/doorbreaker",
+  "textures": {
+    "0": "darkrp_stuff:blocks/doorbreaker",
+    "particle": "darkrp_stuff:items/doorbreaker"
+  }
+}

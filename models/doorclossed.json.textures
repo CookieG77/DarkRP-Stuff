@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "iron_door_bottom"
+      },
+      "name": "default"
+    },
+    "iron_top": {
+      "map": {
+        "0": "iron_door_top"
+      },
+      "name": "iron_top"
+    }
+  }
+}

@@ -39,7 +39,7 @@ public class LockpickItem extends DarkrpStuffModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(DarkRPStuffItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(DarkRPStuffItemGroup.tab).maxStackSize(1).rarity(Rarity.UNCOMMON));
 			setRegistryName("lockpick");
 		}
 
@@ -68,7 +68,8 @@ public class LockpickItem extends DarkrpStuffModElements.ModElement {
 
 			LockpickLorsqueVousCliquezAvecLeBoutonDroitDeLaSourisSurUnBlocProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity),
+							new AbstractMap.SimpleEntry<>("itemstack", itemstack))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
 		}

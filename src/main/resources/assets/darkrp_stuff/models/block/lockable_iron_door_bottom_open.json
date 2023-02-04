@@ -1,0 +1,8 @@
+{
+  "parent": "darkrp_stuff:custom/dooropen",
+  "textures": {
+    "all": "darkrp_stuff:blocks/iron_door_bottom",
+    "particle": "darkrp_stuff:blocks/iron_door_bottom",
+    "0": "darkrp_stuff:blocks/iron_door_bottom"
+  }
+}

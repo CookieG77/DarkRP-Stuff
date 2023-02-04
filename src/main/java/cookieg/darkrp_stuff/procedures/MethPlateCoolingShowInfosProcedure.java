@@ -18,6 +18,8 @@ import java.util.HashMap;
 
 import cookieg.darkrp_stuff.item.SmokeFilterItem;
 import cookieg.darkrp_stuff.item.MethPlateCoolingItem;
+import cookieg.darkrp_stuff.item.LockpickItem;
+import cookieg.darkrp_stuff.item.DoorKeyItem;
 import cookieg.darkrp_stuff.DarkrpStuffMod;
 
 public class MethPlateCoolingShowInfosProcedure {
@@ -90,6 +92,39 @@ public class MethPlateCoolingShowInfosProcedure {
 			}
 			advancementstring = (advancementstring + "\u00A78");
 			for (int index3 = 0; index3 < (int) (10 - advancement); index3++) {
+				advancementstring = (advancementstring + "\u2592");
+			}
+			advancementstring = (advancementstring + "\u00A77\u00A7l]\u00A7r");
+			tooltip.add(new StringTextComponent(advancementstring));
+		}
+		if (DoorKeyItem.block == itemstack.getItem() && Screen.hasShiftDown()) {
+			advancementstring = "\u00A77Propri\u00E9taire : \u00A7a\u00A7l";
+			if ((itemstack.getOrCreateTag().getString("Prori\u00E9taire")).equals("")) {
+				advancementstring = "\u00A77Propri\u00E9taire : \u00A78\u00A7lNone";
+			} else {
+				advancementstring = (advancementstring + "" + itemstack.getOrCreateTag().getString("Prori\u00E9taire"));
+			}
+			tooltip.add(new StringTextComponent(advancementstring));
+		}
+		if (LockpickItem.block == itemstack.getItem() && Screen.hasShiftDown()) {
+			advancement = Math.floor(5 - itemstack.getOrCreateTag().getDouble("FakeDurability"));
+			advancementstring = "\u00A77\u00A7l[\u00A7r";
+			if (advancement == 5) {
+				advancementstring = (advancementstring + "\u00A72");
+			} else if (advancement == 4) {
+				advancementstring = (advancementstring + "\u00A7a");
+			} else if (advancement == 3) {
+				advancementstring = (advancementstring + "\u00A7e");
+			} else if (advancement == 2) {
+				advancementstring = (advancementstring + "\u00A76");
+			} else {
+				advancementstring = (advancementstring + "\u00A7c");
+			}
+			for (int index4 = 0; index4 < (int) (advancement); index4++) {
+				advancementstring = (advancementstring + "\u2588");
+			}
+			advancementstring = (advancementstring + "\u00A78");
+			for (int index5 = 0; index5 < (int) (5 - advancement); index5++) {
 				advancementstring = (advancementstring + "\u2592");
 			}
 			advancementstring = (advancementstring + "\u00A77\u00A7l]\u00A7r");

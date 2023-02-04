@@ -1,0 +1,12 @@
+{
+  "_fv": 33,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "W",
+    "keyBindingName": "Lockpick : Tourner le vérrou",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "LockPickTurnLockToucheEnfoncee"
+    }
+  }
+}

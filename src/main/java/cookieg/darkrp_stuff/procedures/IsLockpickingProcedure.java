@@ -7,12 +7,14 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraft.world.World;
 import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
+import net.minecraft.item.ItemStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import java.util.Map;
 import java.util.HashMap;
 
+import cookieg.darkrp_stuff.item.LockpickItem;
 import cookieg.darkrp_stuff.DarkrpStuffModVariables;
 import cookieg.darkrp_stuff.DarkrpStuffMod;
 
@@ -54,6 +56,37 @@ public class IsLockpickingProcedure {
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.MINING_FATIGUE, (int) 2, (int) 250, (false), (false)));
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WEAKNESS, (int) 2, (int) 250, (false), (false)));
+			if (!(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == LockpickItem.block)) {
+				{
+					boolean _setval = (false);
+					entity.getCapability(DarkrpStuffModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Lockpicking = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = (false);
+					entity.getCapability(DarkrpStuffModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.TurningLock = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = 0;
+					entity.getCapability(DarkrpStuffModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.LockAnimationGui = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = 0;
+					entity.getCapability(DarkrpStuffModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Lockpick_position = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 		}
 	}
 }

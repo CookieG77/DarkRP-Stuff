@@ -1077,6 +1077,10 @@
             "type": "entity"
           },
           {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -1143,6 +1147,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1160,6 +1180,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1457,21 +1493,21 @@
       "path": "~/item/lockpick/commandlockpick"
     },
     {
-      "name": "StopLockpick",
-      "type": "command",
-      "sortid": 94,
+      "name": "LockPickTurnLock",
+      "type": "keybind",
+      "sortid": 96,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "stop_lockpick",
-      "path": "~/item/lockpick/commandlockpick"
+      "registry_name": "lock_pick_turn_lock",
+      "path": "~/item/lockpick"
     },
     {
-      "name": "StopLockpickingProcedure",
+      "name": "LockPickTurnLockToucheEnfoncee",
       "type": "procedure",
-      "sortid": 95,
+      "sortid": 97,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "stop_lockpicking_procedure",
+      "registry_name": "lock_pick_turn_lock_touche_enfoncee",
       "metadata": {
         "dependencies": [
           {
@@ -1480,7 +1516,571 @@
           }
         ]
       },
-      "path": "~/item/lockpick/commandlockpick"
+      "path": "~/item/lockpick"
+    },
+    {
+      "name": "VerifVerrou0",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verif_verrou_0",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "VerifVerrou1",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verif_verrou_1",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "VerifVerrou2",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verif_verrou_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "VerifVerrou3",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verif_verrou_3",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "VerifVerrou4",
+      "type": "procedure",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verif_verrou_4",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "VerifVerrou5",
+      "type": "procedure",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verif_verrou_5",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "VerifVerrou6",
+      "type": "procedure",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verif_verrou_6",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/LockpickOverlayConditions"
+    },
+    {
+      "name": "LockableIronDoorBottomClosed",
+      "type": "block",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lockable_iron_door_bottom_closed",
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "LockableIronDoorTopClosed",
+      "type": "block",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lockable_iron_door_top_closed",
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "LockableIronDoorBottomOpen",
+      "type": "block",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lockable_iron_door_bottom_open",
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "LockableIronDoorTopOpen",
+      "type": "block",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lockable_iron_door_top_open",
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "LockableIronDoor",
+      "type": "item",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lockable_iron_door",
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "LockableIronDoorLorsqueVousCliquezAvecLeBoutonDroitDeLaSourisSurUnBloc",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lockable_iron_door_lorsque_vous_cliquez_avec_le_bouton_droit_de_la_souris_sur_un_bloc",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "AltLockableIronDoorBottomClosed",
+      "type": "block",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "alt_lockable_iron_door_bottom_closed",
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "AltLockableIronDoorTopClosed",
+      "type": "block",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "alt_lockable_iron_door_top_closed",
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "AltLockableIronDoorBottomOpen",
+      "type": "block",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "alt_lockable_iron_door_bottom_open",
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "AltLockableIronDoorTopOpen",
+      "type": "block",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "alt_lockable_iron_door_top_open",
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "DoorKey",
+      "type": "item",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "door_key",
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "ClickDroitPorte",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "click_droit_porte",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "AttributKeyToPlayer",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attribut_key_to_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "PorteBreakUp",
+      "type": "procedure",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "porte_break_up",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "PorteBreakDown",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "porte_break_down",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "LockpickAnimationAndOpen",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lockpick_animation_and_open",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/lockpick"
+    },
+    {
+      "name": "AddPlayerToKey",
+      "type": "procedure",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_player_to_key",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "AjoutProprietaireCle",
+      "type": "command",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ajout_proprietaire_cle",
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "DoorKeyQuandLitemEstDansLinventaireParTick",
+      "type": "procedure",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "door_key_quand_litem_est_dans_linventaire_par_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "LockUpgradeIron",
+      "type": "item",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lock_upgrade_iron",
+      "path": "~/item/lockpick"
+    },
+    {
+      "name": "LockUpgradeGold",
+      "type": "item",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lock_upgrade_gold",
+      "path": "~/item/lockpick"
+    },
+    {
+      "name": "LockUpgradeDiamond",
+      "type": "item",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lock_upgrade_diamond",
+      "path": "~/item/lockpick"
+    },
+    {
+      "name": "UpgradeDoorOnClick",
+      "type": "procedure",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_door_on_click",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/lockpick"
+    },
+    {
+      "name": "DoorBreaker",
+      "type": "item",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "door_breaker",
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "ClickDroitPorteBelier",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "click_droit_porte_belier",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/CustomDoor"
+    },
+    {
+      "name": "BelierLookAtDoor",
+      "type": "procedure",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "belier_look_at_door",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/lockpick/CustomDoor"
     }
   ],
   "variable_elements": [
@@ -1512,6 +2112,18 @@
       "name": "Lockpick_position",
       "type": "number",
       "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "TurningLock",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "LockAnimationGui",
+      "type": "number",
+      "scope": "player_persistent",
       "value": "0"
     }
   ],
@@ -1547,48 +2159,117 @@
       ],
       "category": "block",
       "subtitle": ""
+    },
+    {
+      "name": "lockpick_break",
+      "files": [
+        "this-mod-is-a-mistake......_"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "lockpick_moov1",
+      "files": [
+        "lockpickmoov1_1"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "lockpick_moov2",
+      "files": [
+        "lockpickmoov2"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "lockpick_moov3",
+      "files": [
+        "lockpickmoov3_1"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "lockpick_moov4",
+      "files": [
+        "lockpickmoov4"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "lockpick_open",
+      "files": [
+        "lockpickopen"
+      ],
+      "category": "player",
+      "subtitle": ""
     }
   ],
   "language_map": {
     "en_us": {
+      "block.darkrp_stuff.lockable_iron_door_top_open": "Porte en fer vérouillée",
       "block.moneyprinter.printer_lvl_1": "Printer Niveau 1",
-      "item.darkrp_stuff.meth_plate_cooling": "Plateau de Meth Liquide",
       "item.darkrp_stuff.lockpick": "Lockpick",
-      "item.darkrp_stuff.smoke_filter": "Filtre à air",
-      "subtitles.moneyclick": "money printer click when money pop",
-      "block.darkrp_stuff.printer_lvl_1": "Printer Niveau 1",
-      "subtitles.methmixer_mixing": "",
-      "block.darkrp_stuff.printer_lv_l_3": "Printer Niveau 3",
+      "block.darkrp_stuff.lockable_iron_door_bottom_closed": "Porte en fer vérouillée",
       "block.darkrp_stuff.meth_crate_full": "Caisse de Meth",
       "block.darkrp_stuff.meth_crate_2": "Caisse de Meth",
       "block.darkrp_stuff.meth_crate_1": "Caisse de Meth",
       "subtitles.methmixer_nofilter": "",
-      "block.darkrp_stuff.printer_lv_l_2": "Printer Niveau 2",
-      "block.darkrp_stuff.aluminium_crate_closed": "Carton d\u0027Aluminium Fermer",
-      "item.darkrp_stuff.dirty_money_1": "Argent Sale",
-      "item.darkrp_stuff.dirty_money_2": "Paquet d\u0027Argent Sale",
-      "item.darkrp_stuff.meth_bag": "Sachet de Méthamphétamine",
+      "block.darkrp_stuff.alt_lockable_iron_door_top_closed": "Porte en fer vérouillée",
+      "block.darkrp_stuff.lockable_iron_door_top_closed": "Porte en fer vérouillée",
+      "item.darkrp_stuff.door_breaker": "Bélier",
       "block.darkrp_stuff.meth_crate_4": "Caisse de Meth",
-      "item.darkrp_stuff.dirty_money_3": "Gros Paquet d\u0027Argent Sale",
       "block.darkrp_stuff.meth_crate_3": "Caisse de Meth",
-      "subtitles.fan": "bruit ventilateur d\u0027imprimente à argent",
       "block.darkrp_stuff.meth_crate_5": "Caisse de Meth",
       "block.darkrp_stuff.meth_crate": "Caisse de Meth",
       "key.darkrp_stuff.lock_pick_right": "Lockpick : Tourner vers la droite",
       "item.darkrp_stuff.plate": "Plateau d\u0027aluminium",
-      "block.darkrp_stuff.meth_mixer": "Mélanger Industriel",
-      "item.darkrp_stuff.meth_plate": "Plateau de Meth",
+      "block.darkrp_stuff.alt_lockable_iron_door_bottom_closed": "Porte en fer vérouillée",
+      "item.darkrp_stuff.lock_upgrade_diamond": "Amélioration de vérou en Diamand",
+      "key.darkrp_stuff.lock_pick_turn_lock": "Lockpick : Tourner le vérrou",
       "item.moneyprinter.dirty_money_3": "Gros Paquet d\u0027Argent Salle",
-      "block.darkrp_stuff.metylamine_barrel": "Barril de Metylamine",
-      "key.darkrp_stuff.lock_pick_left": "Lockpick : Tourner vers la gauche",
       "item.moneyprinter.dirty_money_1": "Argent Salle",
       "item.moneyprinter.dirty_money_2": "Paquet d\u0027Argent Salle",
       "block.moneyprinter.printer_lv_l_2": "Printer Niveau 2",
       "block.moneyprinter.printer_lv_l_3": "Printer Niveau 3",
+      "subtitles.lockpick_open": "",
+      "item.darkrp_stuff.lockable_iron_door": "Porte en fer vérouillée",
+      "subtitles.methmixer": "",
+      "item.darkrp_stuff.door_key": "Clé de porte",
+      "item.darkrp_stuff.meth_plate_cooling": "Plateau de Meth Liquide",
+      "item.darkrp_stuff.smoke_filter": "Filtre à air",
+      "subtitles.moneyclick": "money printer click when money pop",
+      "block.darkrp_stuff.printer_lvl_1": "Printer Niveau 1",
+      "block.darkrp_stuff.alt_lockable_iron_door_top_open": "Porte en fer vérouillée",
+      "subtitles.methmixer_mixing": "",
+      "block.darkrp_stuff.printer_lv_l_3": "Printer Niveau 3",
+      "block.darkrp_stuff.printer_lv_l_2": "Printer Niveau 2",
+      "block.darkrp_stuff.aluminium_crate_closed": "Carton d\u0027Aluminium Fermer",
+      "item.darkrp_stuff.dirty_money_1": "Argent Sale",
+      "item.darkrp_stuff.meth_bag": "Sachet de Méthamphétamine",
+      "item.darkrp_stuff.dirty_money_2": "Paquet d\u0027Argent Sale",
+      "item.darkrp_stuff.dirty_money_3": "Gros Paquet d\u0027Argent Sale",
+      "subtitles.fan": "bruit ventilateur d\u0027imprimente à argent",
+      "item.darkrp_stuff.lock_upgrade_gold": "Amélioration de vérou en Or",
+      "subtitles.lockpick_break": "",
+      "block.darkrp_stuff.meth_mixer": "Mélanger Industriel",
+      "item.darkrp_stuff.lock_upgrade_iron": "Amélioration de vérou en Fer",
+      "item.darkrp_stuff.meth_plate": "Plateau de Meth",
+      "block.darkrp_stuff.alt_lockable_iron_door_bottom_open": "Porte en fer vérouillée",
+      "block.darkrp_stuff.metylamine_barrel": "Barril de Metylamine",
+      "key.darkrp_stuff.lock_pick_left": "Lockpick : Tourner vers la gauche",
       "block.darkrp_stuff.meth_freezer": "Congélateur",
       "itemGroup.tabdark_rp_stuff": "Dark-RP Stuff",
       "block.darkrp_stuff.aluminium_crate_opened": "Carton d\u0027Aluminium",
-      "subtitles.methmixer": ""
+      "subtitles.lockpick_moov2": "",
+      "subtitles.lockpick_moov1": "",
+      "block.darkrp_stuff.lockable_iron_door_bottom_open": "Porte en fer vérouillée",
+      "subtitles.lockpick_moov4": "",
+      "subtitles.lockpick_moov3": ""
     }
   },
   "foldersRoot": {
@@ -1610,6 +2291,10 @@
               },
               {
                 "name": "commandlockpick",
+                "children": []
+              },
+              {
+                "name": "CustomDoor",
                 "children": []
               }
             ]

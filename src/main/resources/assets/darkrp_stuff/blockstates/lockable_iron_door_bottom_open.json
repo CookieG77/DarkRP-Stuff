@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "darkrp_stuff:block/lockable_iron_door_bottom_open"
+    },
+    "facing=east": {
+      "model": "darkrp_stuff:block/lockable_iron_door_bottom_open",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "darkrp_stuff:block/lockable_iron_door_bottom_open",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "darkrp_stuff:block/lockable_iron_door_bottom_open",
+      "y": 270
+    }
+  }
+}
