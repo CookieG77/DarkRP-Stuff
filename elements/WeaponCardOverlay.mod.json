@@ -1,0 +1,96 @@
+{
+  "_fv": 33,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "weaponcardgui.png",
+          "use1Xscale": true,
+          "name": "weaponcardgui.png",
+          "x": 86,
+          "y": -8
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:IdentityCardGivenName>  <VAR:IdentityCardSurname>",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "<VAR:IdentityCardGivenName>  <VAR:IdentityCardSurname>",
+          "x": 190,
+          "y": 92
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:IdentityCardOriginCountry>",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "<VAR:IdentityCardOriginCountry>",
+          "x": 267,
+          "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:IdentityCardResidentSince>",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "<VAR:IdentityCardResidentSince>",
+          "x": 190,
+          "y": 128
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:IdentityCardExpiration>",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "<VAR:IdentityCardExpiration>",
+          "x": 192,
+          "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "W-52815749",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "W-52815749",
+          "x": 230,
+          "y": 80
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "CheckWeaponCardGUI"
+    },
+    "gridSettings": {
+      "sx": 6,
+      "sy": 6,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

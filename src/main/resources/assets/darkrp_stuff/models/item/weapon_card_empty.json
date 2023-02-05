@@ -1,0 +1,7 @@
+{
+  "parent": "darkrp_stuff:custom/card",
+  "textures": {
+    "0": "darkrp_stuff:blocks/fullweaponcardempty",
+    "particle": "darkrp_stuff:items/weaponcard"
+  }
+}

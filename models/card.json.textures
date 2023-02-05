@@ -1,0 +1,40 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "fullidentitycard"
+      },
+      "name": "default"
+    },
+    "empty": {
+      "map": {
+        "0": "fullidentitycardempty"
+      },
+      "name": "empty"
+    },
+    "driving": {
+      "map": {
+        "0": "fulldrivinglicense"
+      },
+      "name": "driving"
+    },
+    "drivingempty": {
+      "map": {
+        "0": "fulldrivinglicense_empty"
+      },
+      "name": "drivingempty"
+    },
+    "weapon": {
+      "map": {
+        "0": "fullweaponcard"
+      },
+      "name": "weapon"
+    },
+    "weaponempty": {
+      "map": {
+        "0": "fullweaponcardempty"
+      },
+      "name": "weaponempty"
+    }
+  }
+}

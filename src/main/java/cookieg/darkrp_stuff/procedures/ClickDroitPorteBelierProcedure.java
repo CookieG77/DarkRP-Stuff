@@ -59,7 +59,7 @@ public class ClickDroitPorteBelierProcedure {
 				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == AltLockableIronDoorTopOpenBlock.block
 				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == AltLockableIronDoorBottomOpenBlock.block) {
 			itemstack.getOrCreateTag().putBoolean("Opening", (true));
-			itemstack.getOrCreateTag().putBoolean("Opended", (false));
+			itemstack.getOrCreateTag().putBoolean("Opened", (false));
 			itemstack.getOrCreateTag().putDouble("X", x);
 			itemstack.getOrCreateTag().putDouble("Y", y);
 			itemstack.getOrCreateTag().putDouble("Z", z);

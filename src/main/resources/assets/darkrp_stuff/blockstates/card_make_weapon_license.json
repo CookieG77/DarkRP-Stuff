@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "darkrp_stuff:block/card_make_weapon_license"
+    },
+    "facing=east": {
+      "model": "darkrp_stuff:block/card_make_weapon_license",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "darkrp_stuff:block/card_make_weapon_license",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "darkrp_stuff:block/card_make_weapon_license",
+      "y": 270
+    }
+  }
+}

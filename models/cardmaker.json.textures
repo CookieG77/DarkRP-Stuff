@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "cardmaker0"
+      },
+      "name": "default"
+    },
+    "drivinglicense": {
+      "map": {
+        "0": "cardmaker1"
+      },
+      "name": "drivinglicense"
+    },
+    "weaponlicense": {
+      "map": {
+        "0": "cardmaker2"
+      },
+      "name": "weaponlicense"
+    }
+  }
+}

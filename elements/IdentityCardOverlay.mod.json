@@ -1,0 +1,122 @@
+{
+  "_fv": 33,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "identitycardgui.png",
+          "use1Xscale": true,
+          "name": "identitycardgui.png",
+          "x": 86,
+          "y": -8
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:IdentityCardSurname>",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "<VAR:IdentityCardSurname>",
+          "x": 183,
+          "y": 91
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:IdentityCardGivenName>",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "<VAR:IdentityCardGivenName>",
+          "x": 183,
+          "y": 115
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:IdentityCardOriginCountry>",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "<VAR:IdentityCardOriginCountry>",
+          "x": 183,
+          "y": 163
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:IdentityCardExpiration>",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "<VAR:IdentityCardExpiration>",
+          "x": 260,
+          "y": 178
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:IdentityCardResidentSince>",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "<VAR:IdentityCardResidentSince>",
+          "x": 260,
+          "y": 188
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "000-000-001",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "000-000-001",
+          "x": 182,
+          "y": 139
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "RE8",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "RE8",
+          "x": 270,
+          "y": 115
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "CheckIdentityCardGUI"
+    },
+    "gridSettings": {
+      "sx": 10,
+      "sy": 10,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

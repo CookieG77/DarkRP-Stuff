@@ -286,655 +286,662 @@ public class BelierLookAtDoorProcedure {
 									new StringTextComponent("\u00A7f\u00A7l[\u00A7e\u2588\u2588\u2588\u00A78\u2592\u2592\u00A7f\u00A7l]"), (true));
 						}
 					}
-					if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
-							.getDouble("OpeningTime") == 80) {
-						if (new Object() {
-							public double getValue(IWorld world, BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
+				}
+				if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
+						.getDouble("OpeningTime") == 80) {
+					if (new Object() {
+						public double getValue(IWorld world, BlockPos pos, String tag) {
+							TileEntity tileEntity = world.getTileEntity(pos);
+							if (tileEntity != null)
+								return tileEntity.getTileData().getDouble(tag);
+							return -1;
+						}
+					}.getValue(world, new BlockPos(X, Y, Z), "Level") == 1) {
+						if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+							((PlayerEntity) entity).sendStatusMessage(
+									new StringTextComponent("\u00A7f\u00A7l[\u00A72\u2588\u2588\u2588\u2588\u00A7f\u00A7l]"), (true));
+						}
+						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
+								.putBoolean("Opened", (true));
+					} else if (new Object() {
+						public double getValue(IWorld world, BlockPos pos, String tag) {
+							TileEntity tileEntity = world.getTileEntity(pos);
+							if (tileEntity != null)
+								return tileEntity.getTileData().getDouble(tag);
+							return -1;
+						}
+					}.getValue(world, new BlockPos(X, Y, Z), "Level") == 2) {
+						if (MathHelper.nextInt(new Random(), 0, 1) == 0) {
+							if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+								((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7f\u00A7lEchec"), (true));
 							}
-						}.getValue(world, new BlockPos(X, Y, Z), "Level") == 1) {
+							((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
+									.putBoolean("Opening", (false));
+						} else {
 							if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 								((PlayerEntity) entity).sendStatusMessage(
 										new StringTextComponent("\u00A7f\u00A7l[\u00A72\u2588\u2588\u2588\u2588\u00A7f\u00A7l]"), (true));
 							}
 							((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
 									.putBoolean("Opened", (true));
-						} else if (new Object() {
-							public double getValue(IWorld world, BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
+						}
+					} else if (new Object() {
+						public double getValue(IWorld world, BlockPos pos, String tag) {
+							TileEntity tileEntity = world.getTileEntity(pos);
+							if (tileEntity != null)
+								return tileEntity.getTileData().getDouble(tag);
+							return -1;
+						}
+					}.getValue(world, new BlockPos(X, Y, Z), "Level") == 3) {
+						if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+							((PlayerEntity) entity).sendStatusMessage(
+									new StringTextComponent("\u00A7f\u00A7l[\u00A7a\u2588\u2588\u2588\u2588\u00A78\u2592\u00A7f\u00A7l]"), (true));
+						}
+					}
+				}
+				if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
+						.getDouble("OpeningTime") == 100) {
+					if (new Object() {
+						public double getValue(IWorld world, BlockPos pos, String tag) {
+							TileEntity tileEntity = world.getTileEntity(pos);
+							if (tileEntity != null)
+								return tileEntity.getTileData().getDouble(tag);
+							return -1;
+						}
+					}.getValue(world, new BlockPos(X, Y, Z), "Level") == 3) {
+						if (!(MathHelper.nextInt(new Random(), 0, 1) == 1)) {
+							if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+								((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7f\u00A7lEchec"), (true));
 							}
-						}.getValue(world, new BlockPos(X, Y, Z), "Level") == 2) {
-							if (MathHelper.nextInt(new Random(), 0, 1) == 0) {
-								if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-									((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7f\u00A7lEchec"), (true));
-								}
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
-										.putBoolean("Opening", (false));
-							} else {
-								if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-									((PlayerEntity) entity).sendStatusMessage(
-											new StringTextComponent("\u00A7f\u00A7l[\u00A72\u2588\u2588\u2588\u2588\u00A7f\u00A7l]"), (true));
-								}
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
-										.putBoolean("Opened", (true));
-							}
-						} else if (new Object() {
-							public double getValue(IWorld world, BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, new BlockPos(X, Y, Z), "Level") == 3) {
+							((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
+									.putBoolean("Opening", (false));
+						} else {
 							if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 								((PlayerEntity) entity).sendStatusMessage(
-										new StringTextComponent("\u00A7f\u00A7l[\u00A7a\u2588\u2588\u2588\u2588\u00A78\u2592\u00A7f\u00A7l]"),
-										(true));
+										new StringTextComponent("\u00A7f\u00A7l[\u00A72\u2588\u2588\u2588\u2588\u2588\u00A7f\u00A7l]"), (true));
 							}
+							((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
+									.putBoolean("Opened", (true));
 						}
 					}
-					if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
-							.getDouble("OpeningTime") == 100) {
-						if (new Object() {
-							public double getValue(IWorld world, BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
+				}
+				if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
+						.getBoolean("Opened")) {
+					if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == LockableIronDoorTopClosedBlock.block) {
+						{
+							BlockPos _bp = new BlockPos(X, Y - 1, Z);
+							BlockState _bs = LockableIronDoorBottomOpenBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
 							}
-						}.getValue(world, new BlockPos(X, Y, Z), "Level") == 3) {
-							if (!(MathHelper.nextInt(new Random(), 0, 1) == 1)) {
-								if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-									((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7f\u00A7lEchec"), (true));
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
 								}
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
-										.putBoolean("Opening", (false));
-							} else {
-								if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-									((PlayerEntity) entity).sendStatusMessage(
-											new StringTextComponent("\u00A7f\u00A7l[\u00A72\u2588\u2588\u2588\u2588\u2588\u00A7f\u00A7l]"), (true));
-								}
-								((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
-										.putBoolean("Opened", (true));
 							}
 						}
-					}
-					if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
-							.getBoolean("Opened")) {
-						if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == LockableIronDoorTopClosedBlock.block) {
-							{
-								BlockPos _bp = new BlockPos(X, Y - 1, Z);
-								BlockState _bs = LockableIronDoorBottomOpenBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
+						{
+							BlockPos _bp = new BlockPos(X, Y, Z);
+							BlockState _bs = LockableIronDoorTopOpenBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
 								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
 									}
 								}
-							}
-							{
-								BlockPos _bp = new BlockPos(X, Y, Z);
-								BlockState _bs = LockableIronDoorTopOpenBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							if (world instanceof World && !world.isRemote()) {
-								((World) world).playSound(null, new BlockPos(X, Y, Z),
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("block.iron_door.close")),
-										SoundCategory.NEUTRAL, (float) 1, (float) 1);
-							} else {
-								((World) world).playSound(X, Y, Z,
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("block.iron_door.close")),
-										SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-							}
-						} else if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == LockableIronDoorBottomClosedBlock.block) {
-							{
-								BlockPos _bp = new BlockPos(X, Y + 1, Z);
-								BlockState _bs = LockableIronDoorTopOpenBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							{
-								BlockPos _bp = new BlockPos(X, Y, Z);
-								BlockState _bs = LockableIronDoorBottomOpenBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							if (world instanceof World && !world.isRemote()) {
-								((World) world).playSound(null, new BlockPos(X, Y, Z),
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("block.iron_door.close")),
-										SoundCategory.NEUTRAL, (float) 1, (float) 1);
-							} else {
-								((World) world).playSound(X, Y, Z,
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("block.iron_door.close")),
-										SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-							}
-						} else if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == AltLockableIronDoorTopClosedBlock.block) {
-							{
-								BlockPos _bp = new BlockPos(X, Y - 1, Z);
-								BlockState _bs = AltLockableIronDoorBottomOpenBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							{
-								BlockPos _bp = new BlockPos(X, Y, Z);
-								BlockState _bs = AltLockableIronDoorTopOpenBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							if (world instanceof World && !world.isRemote()) {
-								((World) world)
-										.playSound(null, new BlockPos(X, Y, Z),
-												(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-														.getValue(new ResourceLocation("block.iron_door.open")),
-												SoundCategory.NEUTRAL, (float) 1, (float) 1);
-							} else {
-								((World) world).playSound(X, Y, Z,
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("block.iron_door.open")),
-										SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-							}
-						} else if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == AltLockableIronDoorBottomClosedBlock.block) {
-							{
-								BlockPos _bp = new BlockPos(X, Y + 1, Z);
-								BlockState _bs = AltLockableIronDoorTopOpenBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							{
-								BlockPos _bp = new BlockPos(X, Y, Z);
-								BlockState _bs = AltLockableIronDoorBottomOpenBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							if (world instanceof World && !world.isRemote()) {
-								((World) world)
-										.playSound(null, new BlockPos(X, Y, Z),
-												(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-														.getValue(new ResourceLocation("block.iron_door.open")),
-												SoundCategory.NEUTRAL, (float) 1, (float) 1);
-							} else {
-								((World) world).playSound(X, Y, Z,
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("block.iron_door.open")),
-										SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-							}
-						} else if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == LockableIronDoorTopOpenBlock.block) {
-							{
-								BlockPos _bp = new BlockPos(X, Y - 1, Z);
-								BlockState _bs = LockableIronDoorBottomClosedBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							{
-								BlockPos _bp = new BlockPos(X, Y, Z);
-								BlockState _bs = LockableIronDoorTopClosedBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							if (world instanceof World && !world.isRemote()) {
-								((World) world).playSound(null, new BlockPos(x, y, z),
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("block.iron_door.close")),
-										SoundCategory.NEUTRAL, (float) 1, (float) 1);
-							} else {
-								((World) world).playSound(x, y, z,
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("block.iron_door.close")),
-										SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-							}
-						} else if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == LockableIronDoorBottomOpenBlock.block) {
-							{
-								BlockPos _bp = new BlockPos(X, Y + 1, Z);
-								BlockState _bs = LockableIronDoorTopClosedBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							{
-								BlockPos _bp = new BlockPos(X, Y, Z);
-								BlockState _bs = LockableIronDoorBottomClosedBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							if (world instanceof World && !world.isRemote()) {
-								((World) world).playSound(null, new BlockPos(X, Y, Z),
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("block.iron_door.close")),
-										SoundCategory.NEUTRAL, (float) 1, (float) 1);
-							} else {
-								((World) world).playSound(X, Y, Z,
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("block.iron_door.close")),
-										SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-							}
-						} else if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == AltLockableIronDoorTopOpenBlock.block) {
-							{
-								BlockPos _bp = new BlockPos(X, Y - 1, Z);
-								BlockState _bs = AltLockableIronDoorBottomClosedBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							{
-								BlockPos _bp = new BlockPos(X, Y, Z);
-								BlockState _bs = AltLockableIronDoorTopClosedBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							if (world instanceof World && !world.isRemote()) {
-								((World) world)
-										.playSound(null, new BlockPos(X, Y, Z),
-												(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-														.getValue(new ResourceLocation("block.iron_door.open")),
-												SoundCategory.NEUTRAL, (float) 1, (float) 1);
-							} else {
-								((World) world).playSound(X, Y, Z,
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("block.iron_door.open")),
-										SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-							}
-						} else if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == AltLockableIronDoorBottomOpenBlock.block) {
-							{
-								BlockPos _bp = new BlockPos(X, Y + 1, Z);
-								BlockState _bs = AltLockableIronDoorTopClosedBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							{
-								BlockPos _bp = new BlockPos(X, Y, Z);
-								BlockState _bs = AltLockableIronDoorBottomClosedBlock.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
-								}
-								TileEntity _te = world.getTileEntity(_bp);
-								CompoundNBT _bnbt = null;
-								if (_te != null) {
-									_bnbt = _te.write(new CompoundNBT());
-									_te.remove();
-								}
-								world.setBlockState(_bp, _bs, 3);
-								if (_bnbt != null) {
-									_te = world.getTileEntity(_bp);
-									if (_te != null) {
-										try {
-											_te.read(_bso, _bnbt);
-										} catch (Exception ignored) {
-										}
-									}
-								}
-							}
-							if (world instanceof World && !world.isRemote()) {
-								((World) world)
-										.playSound(null, new BlockPos(X, Y, Z),
-												(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-														.getValue(new ResourceLocation("block.iron_door.open")),
-												SoundCategory.NEUTRAL, (float) 1, (float) 1);
-							} else {
-								((World) world).playSound(X, Y, Z,
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("block.iron_door.open")),
-										SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 							}
 						}
-						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
-								.putBoolean("Opening", (false));
+						if (world instanceof World && !world.isRemote()) {
+							((World) world)
+									.playSound(null, new BlockPos(X, Y, Z),
+											(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+													.getValue(new ResourceLocation("block.iron_door.close")),
+											SoundCategory.NEUTRAL, (float) 1, (float) 1);
+						} else {
+							((World) world).playSound(X, Y, Z,
+									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+											.getValue(new ResourceLocation("block.iron_door.close")),
+									SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+						}
+					} else if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == LockableIronDoorBottomClosedBlock.block) {
+						{
+							BlockPos _bp = new BlockPos(X, Y + 1, Z);
+							BlockState _bs = LockableIronDoorTopOpenBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						{
+							BlockPos _bp = new BlockPos(X, Y, Z);
+							BlockState _bs = LockableIronDoorBottomOpenBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						if (world instanceof World && !world.isRemote()) {
+							((World) world)
+									.playSound(null, new BlockPos(X, Y, Z),
+											(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+													.getValue(new ResourceLocation("block.iron_door.close")),
+											SoundCategory.NEUTRAL, (float) 1, (float) 1);
+						} else {
+							((World) world).playSound(X, Y, Z,
+									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+											.getValue(new ResourceLocation("block.iron_door.close")),
+									SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+						}
+					} else if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == AltLockableIronDoorTopClosedBlock.block) {
+						{
+							BlockPos _bp = new BlockPos(X, Y - 1, Z);
+							BlockState _bs = AltLockableIronDoorBottomOpenBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						{
+							BlockPos _bp = new BlockPos(X, Y, Z);
+							BlockState _bs = AltLockableIronDoorTopOpenBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						if (world instanceof World && !world.isRemote()) {
+							((World) world)
+									.playSound(null, new BlockPos(X, Y, Z),
+											(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+													.getValue(new ResourceLocation("block.iron_door.open")),
+											SoundCategory.NEUTRAL, (float) 1, (float) 1);
+						} else {
+							((World) world).playSound(X, Y, Z,
+									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+											.getValue(new ResourceLocation("block.iron_door.open")),
+									SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+						}
+					} else if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == AltLockableIronDoorBottomClosedBlock.block) {
+						{
+							BlockPos _bp = new BlockPos(X, Y + 1, Z);
+							BlockState _bs = AltLockableIronDoorTopOpenBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						{
+							BlockPos _bp = new BlockPos(X, Y, Z);
+							BlockState _bs = AltLockableIronDoorBottomOpenBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						if (world instanceof World && !world.isRemote()) {
+							((World) world)
+									.playSound(null, new BlockPos(X, Y, Z),
+											(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+													.getValue(new ResourceLocation("block.iron_door.open")),
+											SoundCategory.NEUTRAL, (float) 1, (float) 1);
+						} else {
+							((World) world).playSound(X, Y, Z,
+									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+											.getValue(new ResourceLocation("block.iron_door.open")),
+									SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+						}
+					} else if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == LockableIronDoorTopOpenBlock.block) {
+						{
+							BlockPos _bp = new BlockPos(X, Y - 1, Z);
+							BlockState _bs = LockableIronDoorBottomClosedBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						{
+							BlockPos _bp = new BlockPos(X, Y, Z);
+							BlockState _bs = LockableIronDoorTopClosedBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						if (world instanceof World && !world.isRemote()) {
+							((World) world)
+									.playSound(null, new BlockPos(x, y, z),
+											(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+													.getValue(new ResourceLocation("block.iron_door.close")),
+											SoundCategory.NEUTRAL, (float) 1, (float) 1);
+						} else {
+							((World) world).playSound(x, y, z,
+									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+											.getValue(new ResourceLocation("block.iron_door.close")),
+									SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+						}
+					} else if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == LockableIronDoorBottomOpenBlock.block) {
+						{
+							BlockPos _bp = new BlockPos(X, Y + 1, Z);
+							BlockState _bs = LockableIronDoorTopClosedBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						{
+							BlockPos _bp = new BlockPos(X, Y, Z);
+							BlockState _bs = LockableIronDoorBottomClosedBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						if (world instanceof World && !world.isRemote()) {
+							((World) world)
+									.playSound(null, new BlockPos(X, Y, Z),
+											(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+													.getValue(new ResourceLocation("block.iron_door.close")),
+											SoundCategory.NEUTRAL, (float) 1, (float) 1);
+						} else {
+							((World) world).playSound(X, Y, Z,
+									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+											.getValue(new ResourceLocation("block.iron_door.close")),
+									SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+						}
+					} else if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == AltLockableIronDoorTopOpenBlock.block) {
+						{
+							BlockPos _bp = new BlockPos(X, Y - 1, Z);
+							BlockState _bs = AltLockableIronDoorBottomClosedBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						{
+							BlockPos _bp = new BlockPos(X, Y, Z);
+							BlockState _bs = AltLockableIronDoorTopClosedBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						if (world instanceof World && !world.isRemote()) {
+							((World) world)
+									.playSound(null, new BlockPos(X, Y, Z),
+											(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+													.getValue(new ResourceLocation("block.iron_door.open")),
+											SoundCategory.NEUTRAL, (float) 1, (float) 1);
+						} else {
+							((World) world).playSound(X, Y, Z,
+									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+											.getValue(new ResourceLocation("block.iron_door.open")),
+									SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+						}
+					} else if ((world.getBlockState(new BlockPos(X, Y, Z))).getBlock() == AltLockableIronDoorBottomOpenBlock.block) {
+						{
+							BlockPos _bp = new BlockPos(X, Y + 1, Z);
+							BlockState _bs = AltLockableIronDoorTopClosedBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						{
+							BlockPos _bp = new BlockPos(X, Y, Z);
+							BlockState _bs = AltLockableIronDoorBottomClosedBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						if (world instanceof World && !world.isRemote()) {
+							((World) world)
+									.playSound(null, new BlockPos(X, Y, Z),
+											(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+													.getValue(new ResourceLocation("block.iron_door.open")),
+											SoundCategory.NEUTRAL, (float) 1, (float) 1);
+						} else {
+							((World) world).playSound(X, Y, Z,
+									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+											.getValue(new ResourceLocation("block.iron_door.open")),
+									SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+						}
 					}
+					((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
+							.putBoolean("Opening", (false));
+					((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
+							.putBoolean("Opened", (false));
+					((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag()
+							.putDouble("OpeningTime", 0);
 				}
 			}
 		}

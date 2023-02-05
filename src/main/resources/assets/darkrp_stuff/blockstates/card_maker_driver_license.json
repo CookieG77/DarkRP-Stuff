@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "darkrp_stuff:block/card_maker_driver_license"
+    },
+    "facing=east": {
+      "model": "darkrp_stuff:block/card_maker_driver_license",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "darkrp_stuff:block/card_maker_driver_license",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "darkrp_stuff:block/card_maker_driver_license",
+      "y": 270
+    }
+  }
+}

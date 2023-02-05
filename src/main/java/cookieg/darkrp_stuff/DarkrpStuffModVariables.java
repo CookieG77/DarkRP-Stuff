@@ -221,6 +221,11 @@ public class DarkrpStuffModVariables {
 			nbt.putDouble("Lockpick_position", instance.Lockpick_position);
 			nbt.putBoolean("TurningLock", instance.TurningLock);
 			nbt.putDouble("LockAnimationGui", instance.LockAnimationGui);
+			nbt.putString("IdentityCardSurname", instance.IdentityCardSurname);
+			nbt.putString("IdentityCardGivenName", instance.IdentityCardGivenName);
+			nbt.putString("IdentityCardOriginCountry", instance.IdentityCardOriginCountry);
+			nbt.putString("IdentityCardExpiration", instance.IdentityCardExpiration);
+			nbt.putString("IdentityCardResidentSince", instance.IdentityCardResidentSince);
 			return nbt;
 		}
 
@@ -233,6 +238,11 @@ public class DarkrpStuffModVariables {
 			instance.Lockpick_position = nbt.getDouble("Lockpick_position");
 			instance.TurningLock = nbt.getBoolean("TurningLock");
 			instance.LockAnimationGui = nbt.getDouble("LockAnimationGui");
+			instance.IdentityCardSurname = nbt.getString("IdentityCardSurname");
+			instance.IdentityCardGivenName = nbt.getString("IdentityCardGivenName");
+			instance.IdentityCardOriginCountry = nbt.getString("IdentityCardOriginCountry");
+			instance.IdentityCardExpiration = nbt.getString("IdentityCardExpiration");
+			instance.IdentityCardResidentSince = nbt.getString("IdentityCardResidentSince");
 		}
 	}
 
@@ -243,6 +253,11 @@ public class DarkrpStuffModVariables {
 		public double Lockpick_position = 0;
 		public boolean TurningLock = false;
 		public double LockAnimationGui = 0;
+		public String IdentityCardSurname = "\"\"Cookie";
+		public String IdentityCardGivenName = "\"LeGentil\"";
+		public String IdentityCardOriginCountry = "\"\"France";
+		public String IdentityCardExpiration = "\"28/07/2025\"";
+		public String IdentityCardResidentSince = "\"29/12/2004\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -280,6 +295,11 @@ public class DarkrpStuffModVariables {
 		clone.AnimationGUI = original.AnimationGUI;
 		clone.MethMixerInfo1 = original.MethMixerInfo1;
 		clone.LockAnimationGui = original.LockAnimationGui;
+		clone.IdentityCardSurname = original.IdentityCardSurname;
+		clone.IdentityCardGivenName = original.IdentityCardGivenName;
+		clone.IdentityCardOriginCountry = original.IdentityCardOriginCountry;
+		clone.IdentityCardExpiration = original.IdentityCardExpiration;
+		clone.IdentityCardResidentSince = original.IdentityCardResidentSince;
 		if (!event.isWasDeath()) {
 			clone.Lockpicking = original.Lockpicking;
 			clone.Lockpick_position = original.Lockpick_position;
@@ -315,6 +335,11 @@ public class DarkrpStuffModVariables {
 					variables.Lockpick_position = message.data.Lockpick_position;
 					variables.TurningLock = message.data.TurningLock;
 					variables.LockAnimationGui = message.data.LockAnimationGui;
+					variables.IdentityCardSurname = message.data.IdentityCardSurname;
+					variables.IdentityCardGivenName = message.data.IdentityCardGivenName;
+					variables.IdentityCardOriginCountry = message.data.IdentityCardOriginCountry;
+					variables.IdentityCardExpiration = message.data.IdentityCardExpiration;
+					variables.IdentityCardResidentSince = message.data.IdentityCardResidentSince;
 				}
 			});
 			context.setPacketHandled(true);

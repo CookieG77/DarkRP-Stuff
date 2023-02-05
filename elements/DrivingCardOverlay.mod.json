@@ -1,0 +1,135 @@
+{
+  "_fv": 33,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "drivinglicensegui.png",
+          "use1Xscale": false,
+          "name": "drivinglicensegui.png",
+          "x": 86,
+          "y": -8
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§l<VAR:IdentityCardSurname>",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "§l<VAR:IdentityCardSurname>",
+          "x": 195,
+          "y": 118
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§l<VAR:IdentityCardGivenName>",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "§l<VAR:IdentityCardGivenName>",
+          "x": 195,
+          "y": 130
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:IdentityCardResidentSince>",
+          "color": {
+            "value": -52429,
+            "falpha": 0.0
+          },
+          "name": "<VAR:IdentityCardResidentSince>",
+          "x": 201,
+          "y": 154
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:IdentityCardExpiration>",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "<VAR:IdentityCardExpiration>",
+          "x": 200,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§l|1251534",
+          "color": {
+            "value": -52429,
+            "falpha": 0.0
+          },
+          "name": "§l|1251534",
+          "x": 194,
+          "y": 82
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "NONE",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "NONE",
+          "x": 207,
+          "y": 166
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "C",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "C",
+          "x": 290,
+          "y": 82
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "NONE",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "NONE",
+          "x": 277,
+          "y": 94
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "CheckDrivingCardGUI"
+    },
+    "gridSettings": {
+      "sx": 10,
+      "sy": 10,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

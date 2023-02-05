@@ -19,6 +19,8 @@ import java.util.HashMap;
 import cookieg.darkrp_stuff.item.SmokeFilterItem;
 import cookieg.darkrp_stuff.item.MethPlateCoolingItem;
 import cookieg.darkrp_stuff.item.LockpickItem;
+import cookieg.darkrp_stuff.item.IdentityCardItem;
+import cookieg.darkrp_stuff.item.DrivingCardItem;
 import cookieg.darkrp_stuff.item.DoorKeyItem;
 import cookieg.darkrp_stuff.DarkrpStuffMod;
 
@@ -129,6 +131,13 @@ public class MethPlateCoolingShowInfosProcedure {
 			}
 			advancementstring = (advancementstring + "\u00A77\u00A7l]\u00A7r");
 			tooltip.add(new StringTextComponent(advancementstring));
+		}
+		if ((IdentityCardItem.block == itemstack.getItem() || DrivingCardItem.block == itemstack.getItem()) && Screen.hasShiftDown()) {
+			if (!(itemstack.getOrCreateTag().getString("Owner")).equals("")) {
+				tooltip.add(new StringTextComponent(("\u00A77Propri\u00E9taire : \u00A7a\u00A7l" + itemstack.getOrCreateTag().getString("Owner"))));
+			} else {
+				tooltip.add(new StringTextComponent(("\u00A77Propri\u00E9taire : \u00A78None" + itemstack.getOrCreateTag().getString("Owner"))));
+			}
 		}
 	}
 }
