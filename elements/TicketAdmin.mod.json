@@ -45,8 +45,8 @@
             "falpha": 0.0
           },
           "name": "§oTout abus de ticket,",
-          "x": 111,
-          "y": 152
+          "x": 108,
+          "y": 155
         }
       },
       {
@@ -58,8 +58,8 @@
             "falpha": 0.0
           },
           "name": "§osans raison valide sera sanctionné",
-          "x": 111,
-          "y": 161
+          "x": 108,
+          "y": 164
         }
       },
       {
@@ -126,8 +126,8 @@
       }
     ],
     "gridSettings": {
-      "sx": 19,
-      "sy": 18,
+      "sx": 12,
+      "sy": 12,
       "ox": 11,
       "oy": 15,
       "snapOnGrid": true

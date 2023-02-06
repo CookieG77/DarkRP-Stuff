@@ -2216,15 +2216,6 @@
       "path": "~/item/IdentityCard"
     },
     {
-      "name": "AdminTicketControle",
-      "type": "keybind",
-      "sortid": 141,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "admin_ticket_controle",
-      "path": "~/commands/AdminTicket"
-    },
-    {
       "name": "TicketAdmin",
       "type": "gui",
       "sortid": 142,
@@ -2532,6 +2523,130 @@
         ]
       },
       "path": "~/item/IdentityCard"
+    },
+    {
+      "name": "ReportCommand",
+      "type": "command",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "report_command",
+      "path": "~/commands/AdminTicket"
+    },
+    {
+      "name": "Wallet",
+      "type": "item",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wallet",
+      "path": "~/item/Wallet"
+    },
+    {
+      "name": "WalletGUI",
+      "type": "gui",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wallet_gui",
+      "path": "~/item/Wallet"
+    },
+    {
+      "name": "LatexGlove",
+      "type": "item",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "latex_glove",
+      "path": "~/item/LatexGlove"
+    },
+    {
+      "name": "Inspect",
+      "type": "gui",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inspect",
+      "path": "~/item/LatexGlove"
+    },
+    {
+      "name": "InspectPlayer",
+      "type": "procedure",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inspect_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/LatexGlove"
+    },
+    {
+      "name": "InspectInv",
+      "type": "command",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inspect_inv",
+      "path": "~/commands/InspectInventory"
+    },
+    {
+      "name": "AdminInspectInventory",
+      "type": "procedure",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "admin_inspect_inventory",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/commands/InspectInventory"
     }
   ],
   "variable_elements": [
@@ -2698,7 +2813,6 @@
       "block.darkrp_stuff.lockable_iron_door_bottom_closed": "Porte en fer vérouillée",
       "item.darkrp_stuff.driving_card": "Permi de Conduire",
       "block.darkrp_stuff.meth_crate_full": "Caisse de Meth",
-      "key.darkrp_stuff.admin_ticket_controle": "Faire un ticket admin",
       "block.darkrp_stuff.meth_crate_2": "Caisse de Meth",
       "block.darkrp_stuff.meth_crate_1": "Caisse de Meth",
       "block.darkrp_stuff.alt_lockable_iron_door_top_closed": "Porte en fer vérouillée",
@@ -2714,6 +2828,7 @@
       "item.darkrp_stuff.plate": "Plateau d\u0027aluminium",
       "block.darkrp_stuff.alt_lockable_iron_door_bottom_closed": "Porte en fer vérouillée",
       "item.darkrp_stuff.lock_upgrade_diamond": "Amélioration de vérou en Diamand",
+      "item.darkrp_stuff.latex_glove": "Gant en Latex",
       "key.darkrp_stuff.lock_pick_turn_lock": "Lockpick : Tourner le vérrou",
       "item.moneyprinter.dirty_money_3": "Gros Paquet d\u0027Argent Salle",
       "item.moneyprinter.dirty_money_1": "Argent Salle",
@@ -2733,6 +2848,7 @@
       "subtitles.methmixer_mixing": "",
       "block.darkrp_stuff.printer_lv_l_3": "Printer Niveau 3",
       "block.darkrp_stuff.card_make_weapon_license": "Machine à Carte de Permi de Port d\u0027Arme à feu",
+      "item.darkrp_stuff.wallet": "Portefeuille",
       "block.darkrp_stuff.printer_lv_l_2": "Printer Niveau 2",
       "block.darkrp_stuff.card_maker_driver_license": "Machine à Carte de Permi de Conduire",
       "block.darkrp_stuff.aluminium_crate_closed": "Carton d\u0027Aluminium Fermer",
@@ -2793,6 +2909,14 @@
           {
             "name": "IdentityCard",
             "children": []
+          },
+          {
+            "name": "Wallet",
+            "children": []
+          },
+          {
+            "name": "LatexGlove",
+            "children": []
           }
         ]
       },
@@ -2801,6 +2925,10 @@
         "children": [
           {
             "name": "AdminTicket",
+            "children": []
+          },
+          {
+            "name": "InspectInventory",
             "children": []
           }
         ]

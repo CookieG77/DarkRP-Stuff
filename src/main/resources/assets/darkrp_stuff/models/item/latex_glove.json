@@ -1,0 +1,7 @@
+{
+  "parent": "darkrp_stuff:custom/latexglove",
+  "textures": {
+    "0": "darkrp_stuff:blocks/latexglovetexture",
+    "particle": "darkrp_stuff:items/methbag"
+  }
+}

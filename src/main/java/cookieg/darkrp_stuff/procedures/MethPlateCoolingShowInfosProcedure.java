@@ -16,6 +16,7 @@ import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 
+import cookieg.darkrp_stuff.item.WeaponCardItem;
 import cookieg.darkrp_stuff.item.SmokeFilterItem;
 import cookieg.darkrp_stuff.item.MethPlateCoolingItem;
 import cookieg.darkrp_stuff.item.LockpickItem;
@@ -132,7 +133,8 @@ public class MethPlateCoolingShowInfosProcedure {
 			advancementstring = (advancementstring + "\u00A77\u00A7l]\u00A7r");
 			tooltip.add(new StringTextComponent(advancementstring));
 		}
-		if ((IdentityCardItem.block == itemstack.getItem() || DrivingCardItem.block == itemstack.getItem()) && Screen.hasShiftDown()) {
+		if ((IdentityCardItem.block == itemstack.getItem() || DrivingCardItem.block == itemstack.getItem()
+				|| WeaponCardItem.block == itemstack.getItem()) && Screen.hasShiftDown()) {
 			if (!(itemstack.getOrCreateTag().getString("Owner")).equals("")) {
 				tooltip.add(new StringTextComponent(("\u00A77Propri\u00E9taire : \u00A7a\u00A7l" + itemstack.getOrCreateTag().getString("Owner"))));
 			} else {

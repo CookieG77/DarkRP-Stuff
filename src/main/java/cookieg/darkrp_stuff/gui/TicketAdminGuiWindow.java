@@ -89,8 +89,8 @@ public class TicketAdminGuiWindow extends ContainerScreen<TicketAdminGui.GuiCont
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "Ticket Admin", 88, -11, -1);
 		this.font.drawString(ms, "\u00A7l\u00A7n\u26A0 Attention \u26A0 : ", 12, 88, -3407872);
-		this.font.drawString(ms, "\u00A7oTout abus de ticket,", 22, 97, -52429);
-		this.font.drawString(ms, "\u00A7osans raison valide sera sanctionn\u00E9", 22, 106, -52429);
+		this.font.drawString(ms, "\u00A7oTout abus de ticket,", 19, 100, -52429);
+		this.font.drawString(ms, "\u00A7osans raison valide sera sanctionn\u00E9", 19, 109, -52429);
 		this.font.drawString(ms, "Raison __________ : ", 7, 7, -13421773);
 		this.font.drawString(ms, "Description ______ :", 7, 34, -13421773);
 	}
