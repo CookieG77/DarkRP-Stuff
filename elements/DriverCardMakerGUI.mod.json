@@ -2,9 +2,9 @@
   "_fv": 33,
   "_type": "gui",
   "definition": {
-    "type": 1,
-    "width": 286,
-    "height": 195,
+    "type": 0,
+    "width": 234,
+    "height": 120,
     "inventoryOffsetX": 57,
     "inventoryOffsetY": 17,
     "renderBgLayer": true,
@@ -17,21 +17,8 @@
           "width": 120,
           "height": 20,
           "name": "Name",
-          "x": 231,
-          "y": 35
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "Machine à carte",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "name": "Machine à carte",
-          "x": 75,
-          "y": 28
+          "x": 204,
+          "y": 71
         }
       },
       {
@@ -41,8 +28,8 @@
           "width": 120,
           "height": 20,
           "name": "SurName",
-          "x": 231,
-          "y": 62
+          "x": 204,
+          "y": 98
         }
       },
       {
@@ -52,8 +39,8 @@
           "width": 120,
           "height": 20,
           "name": "ResidentSince",
-          "x": 231,
-          "y": 89
+          "x": 204,
+          "y": 125
         }
       },
       {
@@ -65,8 +52,8 @@
             "falpha": 0.0
           },
           "name": "Prénom :",
-          "x": 186,
-          "y": 35
+          "x": 159,
+          "y": 71
         }
       },
       {
@@ -78,8 +65,8 @@
             "falpha": 0.0
           },
           "name": "Nom :",
-          "x": 204,
-          "y": 62
+          "x": 177,
+          "y": 98
         }
       },
       {
@@ -91,33 +78,8 @@
             "falpha": 0.0
           },
           "name": "Date de naissance :",
-          "x": 132,
-          "y": 89
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": "CUSTOM:DrivingCardEmpty"
-          },
-          "id": 0,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
-          "name": "Slot #0",
-          "x": 78,
-          "y": 170
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 1,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
-          "name": "Slot #1",
-          "x": 123,
-          "y": 170
+          "x": 105,
+          "y": 125
         }
       },
       {
@@ -130,8 +92,8 @@
           "width": 56,
           "height": 20,
           "name": "Écrire",
-          "x": 78,
-          "y": 134
+          "x": 177,
+          "y": 152
         }
       }
     ],

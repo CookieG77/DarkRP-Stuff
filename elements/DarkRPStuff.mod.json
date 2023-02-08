@@ -4,7 +4,7 @@
   "definition": {
     "name": "Dark-RP Stuff",
     "icon": {
-      "value": "Items.TOTEM_OF_UNDYING"
+      "value": "CUSTOM:LatexGlove"
     },
     "showSearch": false
   }

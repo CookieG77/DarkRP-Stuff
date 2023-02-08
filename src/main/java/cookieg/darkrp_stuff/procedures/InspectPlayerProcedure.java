@@ -58,8 +58,7 @@ public class InspectPlayerProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity Selector = null;
 		double distance = 0;
-		Selector = entity;
-		distance = 10;
+		distance = 4;
 		{
 			List<Entity> _entfound = world
 					.getEntitiesWithinAABB(Entity.class,
@@ -70,17 +69,16 @@ public class InspectPlayerProcedure {
 						}
 					}.compareDistOf(x, y, z)).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
-				if (distance < Math.sqrt(Math.pow(entityiterator.getPosX() - Selector.getPosX(), 2)
-						+ Math.pow(entityiterator.getPosY() - Selector.getPosY(), 2) + Math.pow(entityiterator.getPosZ() - Selector.getPosZ(), 2))
+				if (distance > Math.sqrt(Math.pow(entityiterator.getPosX() - entity.getPosX(), 2)
+						+ Math.pow(entityiterator.getPosY() - entity.getPosY(), 2) + Math.pow(entityiterator.getPosZ() - entity.getPosZ(), 2))
 						&& !(entityiterator == entity)) {
-					distance = Math.sqrt(
-							Math.pow(entityiterator.getPosX() - Selector.getPosX(), 2) + Math.pow(entityiterator.getPosY() - Selector.getPosY(), 2)
-									+ Math.pow(entityiterator.getPosZ() - Selector.getPosZ(), 2));
+					distance = Math.sqrt(Math.pow(entityiterator.getPosX() - entity.getPosX(), 2)
+							+ Math.pow(entityiterator.getPosY() - entity.getPosY(), 2) + Math.pow(entityiterator.getPosZ() - entity.getPosZ(), 2));
 					Selector = entityiterator;
 				}
 			}
 		}
-		if (!(Selector == entity)) {
+		if (Selector instanceof PlayerEntity) {
 			distance = 0;
 			{
 				String _setval = (Selector.getDisplayName().getString());

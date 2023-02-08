@@ -216,16 +216,18 @@ public class DarkrpStuffModVariables {
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putDouble("AnimationGUI", instance.AnimationGUI);
-			nbt.putString("MethMixerInfo1", instance.MethMixerInfo1);
-			nbt.putBoolean("Lockpicking", instance.Lockpicking);
-			nbt.putDouble("Lockpick_position", instance.Lockpick_position);
-			nbt.putBoolean("TurningLock", instance.TurningLock);
-			nbt.putDouble("LockAnimationGui", instance.LockAnimationGui);
-			nbt.putString("IdentityCardSurname", instance.IdentityCardSurname);
+			nbt.putBoolean("Freezed", instance.Freezed);
+			nbt.putBoolean("Handcuffed", instance.Handcuffed);
+			nbt.putString("IdentityCardExpiration", instance.IdentityCardExpiration);
 			nbt.putString("IdentityCardGivenName", instance.IdentityCardGivenName);
 			nbt.putString("IdentityCardOriginCountry", instance.IdentityCardOriginCountry);
-			nbt.putString("IdentityCardExpiration", instance.IdentityCardExpiration);
 			nbt.putString("IdentityCardResidentSince", instance.IdentityCardResidentSince);
+			nbt.putString("IdentityCardSurname", instance.IdentityCardSurname);
+			nbt.putDouble("LockAnimationGui", instance.LockAnimationGui);
+			nbt.putDouble("Lockpick_position", instance.Lockpick_position);
+			nbt.putBoolean("Lockpicking", instance.Lockpicking);
+			nbt.putString("MethMixerInfo1", instance.MethMixerInfo1);
+			nbt.putBoolean("TurningLock", instance.TurningLock);
 			return nbt;
 		}
 
@@ -233,31 +235,35 @@ public class DarkrpStuffModVariables {
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.AnimationGUI = nbt.getDouble("AnimationGUI");
-			instance.MethMixerInfo1 = nbt.getString("MethMixerInfo1");
-			instance.Lockpicking = nbt.getBoolean("Lockpicking");
-			instance.Lockpick_position = nbt.getDouble("Lockpick_position");
-			instance.TurningLock = nbt.getBoolean("TurningLock");
-			instance.LockAnimationGui = nbt.getDouble("LockAnimationGui");
-			instance.IdentityCardSurname = nbt.getString("IdentityCardSurname");
+			instance.Freezed = nbt.getBoolean("Freezed");
+			instance.Handcuffed = nbt.getBoolean("Handcuffed");
+			instance.IdentityCardExpiration = nbt.getString("IdentityCardExpiration");
 			instance.IdentityCardGivenName = nbt.getString("IdentityCardGivenName");
 			instance.IdentityCardOriginCountry = nbt.getString("IdentityCardOriginCountry");
-			instance.IdentityCardExpiration = nbt.getString("IdentityCardExpiration");
 			instance.IdentityCardResidentSince = nbt.getString("IdentityCardResidentSince");
+			instance.IdentityCardSurname = nbt.getString("IdentityCardSurname");
+			instance.LockAnimationGui = nbt.getDouble("LockAnimationGui");
+			instance.Lockpick_position = nbt.getDouble("Lockpick_position");
+			instance.Lockpicking = nbt.getBoolean("Lockpicking");
+			instance.MethMixerInfo1 = nbt.getString("MethMixerInfo1");
+			instance.TurningLock = nbt.getBoolean("TurningLock");
 		}
 	}
 
 	public static class PlayerVariables {
 		public double AnimationGUI = 0.0;
-		public String MethMixerInfo1 = "\"NA\"";
-		public boolean Lockpicking = false;
-		public double Lockpick_position = 0;
-		public boolean TurningLock = false;
-		public double LockAnimationGui = 0;
-		public String IdentityCardSurname = "\"\"Cookie";
+		public boolean Freezed = false;
+		public boolean Handcuffed = false;
+		public String IdentityCardExpiration = "\"28/07/2025\"";
 		public String IdentityCardGivenName = "\"LeGentil\"";
 		public String IdentityCardOriginCountry = "\"\"France";
-		public String IdentityCardExpiration = "\"28/07/2025\"";
 		public String IdentityCardResidentSince = "\"29/12/2004\"";
+		public String IdentityCardSurname = "\"\"Cookie";
+		public double LockAnimationGui = 0;
+		public double Lockpick_position = 0;
+		public boolean Lockpicking = false;
+		public String MethMixerInfo1 = "\"NA\"";
+		public boolean TurningLock = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -293,16 +299,18 @@ public class DarkrpStuffModVariables {
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		clone.AnimationGUI = original.AnimationGUI;
-		clone.MethMixerInfo1 = original.MethMixerInfo1;
-		clone.LockAnimationGui = original.LockAnimationGui;
-		clone.IdentityCardSurname = original.IdentityCardSurname;
+		clone.Freezed = original.Freezed;
+		clone.IdentityCardExpiration = original.IdentityCardExpiration;
 		clone.IdentityCardGivenName = original.IdentityCardGivenName;
 		clone.IdentityCardOriginCountry = original.IdentityCardOriginCountry;
-		clone.IdentityCardExpiration = original.IdentityCardExpiration;
 		clone.IdentityCardResidentSince = original.IdentityCardResidentSince;
+		clone.IdentityCardSurname = original.IdentityCardSurname;
+		clone.LockAnimationGui = original.LockAnimationGui;
+		clone.MethMixerInfo1 = original.MethMixerInfo1;
 		if (!event.isWasDeath()) {
-			clone.Lockpicking = original.Lockpicking;
+			clone.Handcuffed = original.Handcuffed;
 			clone.Lockpick_position = original.Lockpick_position;
+			clone.Lockpicking = original.Lockpicking;
 			clone.TurningLock = original.TurningLock;
 		}
 	}
@@ -330,16 +338,18 @@ public class DarkrpStuffModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
 					variables.AnimationGUI = message.data.AnimationGUI;
-					variables.MethMixerInfo1 = message.data.MethMixerInfo1;
-					variables.Lockpicking = message.data.Lockpicking;
-					variables.Lockpick_position = message.data.Lockpick_position;
-					variables.TurningLock = message.data.TurningLock;
-					variables.LockAnimationGui = message.data.LockAnimationGui;
-					variables.IdentityCardSurname = message.data.IdentityCardSurname;
+					variables.Freezed = message.data.Freezed;
+					variables.Handcuffed = message.data.Handcuffed;
+					variables.IdentityCardExpiration = message.data.IdentityCardExpiration;
 					variables.IdentityCardGivenName = message.data.IdentityCardGivenName;
 					variables.IdentityCardOriginCountry = message.data.IdentityCardOriginCountry;
-					variables.IdentityCardExpiration = message.data.IdentityCardExpiration;
 					variables.IdentityCardResidentSince = message.data.IdentityCardResidentSince;
+					variables.IdentityCardSurname = message.data.IdentityCardSurname;
+					variables.LockAnimationGui = message.data.LockAnimationGui;
+					variables.Lockpick_position = message.data.Lockpick_position;
+					variables.Lockpicking = message.data.Lockpicking;
+					variables.MethMixerInfo1 = message.data.MethMixerInfo1;
+					variables.TurningLock = message.data.TurningLock;
 				}
 			});
 			context.setPacketHandled(true);

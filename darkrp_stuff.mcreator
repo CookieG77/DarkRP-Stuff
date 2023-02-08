@@ -2152,15 +2152,6 @@
       "path": "~/item/IdentityCard"
     },
     {
-      "name": "CardMaker",
-      "type": "block",
-      "sortid": 137,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "card_maker",
-      "path": "~/item/IdentityCard"
-    },
-    {
       "name": "IdentityCardEmpty",
       "type": "item",
       "sortid": 138,
@@ -2194,22 +2185,6 @@
           {
             "name": "guistate",
             "type": "map"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -2349,15 +2324,6 @@
       "path": "~/item/IdentityCard"
     },
     {
-      "name": "CardMakerDriverLicense",
-      "type": "block",
-      "sortid": 152,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "card_maker_driver_license",
-      "path": "~/item/IdentityCard"
-    },
-    {
       "name": "DriverCardMakerGUI",
       "type": "gui",
       "sortid": 153,
@@ -2382,22 +2348,6 @@
           {
             "name": "guistate",
             "type": "map"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -2479,15 +2429,6 @@
       "path": "~/item/IdentityCard"
     },
     {
-      "name": "CardMakeWeaponLicense",
-      "type": "block",
-      "sortid": 162,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "card_make_weapon_license",
-      "path": "~/item/IdentityCard"
-    },
-    {
       "name": "WriteOnWeaponCard",
       "type": "procedure",
       "sortid": 163,
@@ -2503,22 +2444,6 @@
           {
             "name": "guistate",
             "type": "map"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -2647,15 +2572,319 @@
         ]
       },
       "path": "~/commands/InspectInventory"
+    },
+    {
+      "name": "Handcuffs",
+      "type": "item",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "handcuffs",
+      "path": "~/item/Handcuff"
+    },
+    {
+      "name": "HandcuffsKey",
+      "type": "item",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "handcuffs_key",
+      "path": "~/item/Handcuff"
+    },
+    {
+      "name": "PutHandcuffONorOFF",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "put_handcuff_o_nor_off",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/Handcuff"
+    },
+    {
+      "name": "IfHandcuffed",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_handcuffed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/Handcuff"
+    },
+    {
+      "name": "Handcuff",
+      "type": "command",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "handcuff",
+      "path": "~/item/Handcuff/Commandes"
+    },
+    {
+      "name": "HandcuffCommandProcedure",
+      "type": "procedure",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "handcuff_command_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/item/Handcuff/Commandes"
+    },
+    {
+      "name": "Freeze",
+      "type": "command",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freeze",
+      "path": "~/commands/Freeze"
+    },
+    {
+      "name": "FreezeGuy",
+      "type": "procedure",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freeze_guy",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/commands/Freeze"
+    },
+    {
+      "name": "IfFreezed",
+      "type": "procedure",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_freezed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/commands/Freeze"
+    },
+    {
+      "name": "OpenWriteMenuIdentityCard",
+      "type": "procedure",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_write_menu_identity_card",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/IdentityCard"
+    },
+    {
+      "name": "OpenWriteMenuDrivingLicense",
+      "type": "procedure",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_write_menu_driving_license",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/IdentityCard"
+    },
+    {
+      "name": "OpenWriteMenuWeaponLicense",
+      "type": "procedure",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_write_menu_weapon_license",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/IdentityCard"
+    },
+    {
+      "name": "ConcreteShoes",
+      "type": "armor",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "concrete_shoes",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": true,
+        "ec": false
+      },
+      "path": "~/item/ConcreteShoes"
+    },
+    {
+      "name": "IfInWater",
+      "type": "procedure",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_in_water",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/item/ConcreteShoes"
+    },
+    {
+      "name": "ConcreteBag",
+      "type": "item",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "concrete_bag",
+      "path": "~/item/ConcreteShoes"
+    },
+    {
+      "name": "UseConcretBagOnPlayer",
+      "type": "procedure",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_concret_bag_on_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/item/ConcreteShoes"
     }
   ],
   "variable_elements": [
-    {
-      "name": "modtick",
-      "type": "number",
-      "scope": "map",
-      "value": "0"
-    },
     {
       "name": "AnimationGUI",
       "type": "number",
@@ -2663,40 +2892,22 @@
       "value": "0.0"
     },
     {
-      "name": "MethMixerInfo1",
-      "type": "string",
+      "name": "Freezed",
+      "type": "logic",
       "scope": "player_persistent",
-      "value": "\"NA\""
+      "value": "false"
     },
     {
-      "name": "Lockpicking",
+      "name": "Handcuffed",
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
     },
     {
-      "name": "Lockpick_position",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
-    },
-    {
-      "name": "TurningLock",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "LockAnimationGui",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "IdentityCardSurname",
+      "name": "IdentityCardExpiration",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\"Cookie"
+      "value": "\"28/07/2025\""
     },
     {
       "name": "IdentityCardGivenName",
@@ -2711,16 +2922,52 @@
       "value": "\"\"France"
     },
     {
-      "name": "IdentityCardExpiration",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"28/07/2025\""
-    },
-    {
       "name": "IdentityCardResidentSince",
       "type": "string",
       "scope": "player_persistent",
       "value": "\"29/12/2004\""
+    },
+    {
+      "name": "IdentityCardSurname",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\"Cookie"
+    },
+    {
+      "name": "LockAnimationGui",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Lockpick_position",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "Lockpicking",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "MethMixerInfo1",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"NA\""
+    },
+    {
+      "name": "modtick",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "TurningLock",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -2809,14 +3056,18 @@
     "en_us": {
       "block.darkrp_stuff.lockable_iron_door_top_open": "Porte en fer vérouillée",
       "block.moneyprinter.printer_lvl_1": "Printer Niveau 1",
+      "item.darkrp_stuff.handcuffs_key": "Clé de menottes",
       "item.darkrp_stuff.lockpick": "Lockpick",
+      "item.darkrp_stuff.concrete_shoes_leggings": "Jambières de Concrete Shoes",
+      "item.darkrp_stuff.concrete_bag": "Sac de ciment",
+      "item.darkrp_stuff.handcuffs": "Menottes",
       "block.darkrp_stuff.lockable_iron_door_bottom_closed": "Porte en fer vérouillée",
       "item.darkrp_stuff.driving_card": "Permi de Conduire",
       "block.darkrp_stuff.meth_crate_full": "Caisse de Meth",
       "block.darkrp_stuff.meth_crate_2": "Caisse de Meth",
       "block.darkrp_stuff.meth_crate_1": "Caisse de Meth",
-      "block.darkrp_stuff.alt_lockable_iron_door_top_closed": "Porte en fer vérouillée",
       "subtitles.methmixer_nofilter": "",
+      "block.darkrp_stuff.alt_lockable_iron_door_top_closed": "Porte en fer vérouillée",
       "block.darkrp_stuff.lockable_iron_door_top_closed": "Porte en fer vérouillée",
       "item.darkrp_stuff.door_breaker": "Bélier",
       "block.darkrp_stuff.meth_crate_4": "Caisse de Meth",
@@ -2834,6 +3085,7 @@
       "item.moneyprinter.dirty_money_1": "Argent Salle",
       "item.moneyprinter.dirty_money_2": "Paquet d\u0027Argent Salle",
       "block.moneyprinter.printer_lv_l_2": "Printer Niveau 2",
+      "item.darkrp_stuff.concrete_shoes_boots": "Bottes de Ciment",
       "block.moneyprinter.printer_lv_l_3": "Printer Niveau 3",
       "subtitles.lockpick_open": "",
       "item.darkrp_stuff.identity_card": "Carte d\u0027Identité",
@@ -2847,10 +3099,8 @@
       "block.darkrp_stuff.alt_lockable_iron_door_top_open": "Porte en fer vérouillée",
       "subtitles.methmixer_mixing": "",
       "block.darkrp_stuff.printer_lv_l_3": "Printer Niveau 3",
-      "block.darkrp_stuff.card_make_weapon_license": "Machine à Carte de Permi de Port d\u0027Arme à feu",
       "item.darkrp_stuff.wallet": "Portefeuille",
       "block.darkrp_stuff.printer_lv_l_2": "Printer Niveau 2",
-      "block.darkrp_stuff.card_maker_driver_license": "Machine à Carte de Permi de Conduire",
       "block.darkrp_stuff.aluminium_crate_closed": "Carton d\u0027Aluminium Fermer",
       "item.darkrp_stuff.dirty_money_1": "Argent Sale",
       "item.darkrp_stuff.meth_bag": "Sachet de Méthamphétamine",
@@ -2861,13 +3111,14 @@
       "subtitles.lockpick_break": "",
       "block.darkrp_stuff.meth_mixer": "Mélanger Industriel",
       "item.darkrp_stuff.lock_upgrade_iron": "Amélioration de vérou en Fer",
+      "item.darkrp_stuff.concrete_shoes_helmet": "Casque en Concrete Shoes",
       "item.darkrp_stuff.meth_plate": "Plateau de Meth",
       "item.darkrp_stuff.driving_card_empty": "Permi de Conduire Vierge",
       "block.darkrp_stuff.alt_lockable_iron_door_bottom_open": "Porte en fer vérouillée",
+      "item.darkrp_stuff.concrete_shoes_chestplate": "Plastron de Concrete Shoes",
       "block.darkrp_stuff.metylamine_barrel": "Barril de Metylamine",
       "key.darkrp_stuff.lock_pick_left": "Lockpick : Tourner vers la gauche",
       "block.darkrp_stuff.meth_freezer": "Congélateur",
-      "block.darkrp_stuff.card_maker": "Machine à Carte d\u0027Identité",
       "item.darkrp_stuff.identity_card_empty": "Carte d\u0027Identité Vierge",
       "itemGroup.tabdark_rp_stuff": "Dark-RP Stuff",
       "block.darkrp_stuff.aluminium_crate_opened": "Carton d\u0027Aluminium",
@@ -2917,6 +3168,19 @@
           {
             "name": "LatexGlove",
             "children": []
+          },
+          {
+            "name": "Handcuff",
+            "children": [
+              {
+                "name": "Commandes",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "ConcreteShoes",
+            "children": []
           }
         ]
       },
@@ -2929,6 +3193,10 @@
           },
           {
             "name": "InspectInventory",
+            "children": []
+          },
+          {
+            "name": "Freeze",
             "children": []
           }
         ]
@@ -2952,13 +3220,14 @@
   "workspaceSettings": {
     "modid": "darkrp_stuff",
     "modName": "DarkRP-Stuff",
-    "version": "1.4",
+    "version": "1.7.2",
     "description": "Ce mod ajoute des éléments pour du darkRP, fait avec MCreator",
     "author": "CookieG",
-    "websiteURL": "https://mcreator.net",
+    "websiteURL": "https://discord.gg/Er3juGqr7g",
     "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "modlogo",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],

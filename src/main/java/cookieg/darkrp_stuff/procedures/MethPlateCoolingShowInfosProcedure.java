@@ -21,6 +21,7 @@ import cookieg.darkrp_stuff.item.SmokeFilterItem;
 import cookieg.darkrp_stuff.item.MethPlateCoolingItem;
 import cookieg.darkrp_stuff.item.LockpickItem;
 import cookieg.darkrp_stuff.item.IdentityCardItem;
+import cookieg.darkrp_stuff.item.HandcuffsKeyItem;
 import cookieg.darkrp_stuff.item.DrivingCardItem;
 import cookieg.darkrp_stuff.item.DoorKeyItem;
 import cookieg.darkrp_stuff.DarkrpStuffMod;
@@ -139,6 +140,13 @@ public class MethPlateCoolingShowInfosProcedure {
 				tooltip.add(new StringTextComponent(("\u00A77Propri\u00E9taire : \u00A7a\u00A7l" + itemstack.getOrCreateTag().getString("Owner"))));
 			} else {
 				tooltip.add(new StringTextComponent(("\u00A77Propri\u00E9taire : \u00A78None" + itemstack.getOrCreateTag().getString("Owner"))));
+			}
+		}
+		if (HandcuffsKeyItem.block == itemstack.getItem() && Screen.hasShiftDown()) {
+			if (!(itemstack.getOrCreateTag().getString("Handcuffed")).equals("")) {
+				tooltip.add(new StringTextComponent(("\u00A77Cl\u00E9 pour : \u00A7a\u00A7l" + itemstack.getOrCreateTag().getString("Handcuffed"))));
+			} else {
+				tooltip.add(new StringTextComponent(("\u00A77Cl\u00E9 pour : \u00A78None" + itemstack.getOrCreateTag().getString("Handcuffed"))));
 			}
 		}
 	}

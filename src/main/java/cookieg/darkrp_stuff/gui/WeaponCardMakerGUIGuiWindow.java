@@ -39,8 +39,8 @@ public class WeaponCardMakerGUIGuiWindow extends ContainerScreen<WeaponCardMaker
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 286;
-		this.ySize = 195;
+		this.xSize = 230;
+		this.ySize = 115;
 	}
 
 	private static final ResourceLocation texture = new ResourceLocation("darkrp_stuff:textures/screens/weapon_card_maker_gui.png");
@@ -92,10 +92,9 @@ public class WeaponCardMakerGUIGuiWindow extends ContainerScreen<WeaponCardMaker
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Machine \u00E0 carte", 4, 5, -12829636);
-		this.font.drawString(ms, "Pr\u00E9nom :", 115, 12, -10066330);
-		this.font.drawString(ms, "Nom :", 133, 39, -10066330);
-		this.font.drawString(ms, "Date de naissance :", 61, 66, -10066330);
+		this.font.drawString(ms, "Pr\u00E9nom :", 60, 8, -10066330);
+		this.font.drawString(ms, "Nom :", 78, 35, -10066330);
+		this.font.drawString(ms, "Date de naissance :", 6, 62, -10066330);
 	}
 
 	@Override
@@ -108,19 +107,19 @@ public class WeaponCardMakerGUIGuiWindow extends ContainerScreen<WeaponCardMaker
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		Name = new TextFieldWidget(this.font, this.guiLeft + 160, this.guiTop + 12, 120, 20, new StringTextComponent(""));
+		Name = new TextFieldWidget(this.font, this.guiLeft + 105, this.guiTop + 8, 120, 20, new StringTextComponent(""));
 		guistate.put("text:Name", Name);
 		Name.setMaxStringLength(32767);
 		this.children.add(this.Name);
-		SurName = new TextFieldWidget(this.font, this.guiLeft + 160, this.guiTop + 39, 120, 20, new StringTextComponent(""));
+		SurName = new TextFieldWidget(this.font, this.guiLeft + 105, this.guiTop + 35, 120, 20, new StringTextComponent(""));
 		guistate.put("text:SurName", SurName);
 		SurName.setMaxStringLength(32767);
 		this.children.add(this.SurName);
-		ResidentSince = new TextFieldWidget(this.font, this.guiLeft + 160, this.guiTop + 66, 120, 20, new StringTextComponent(""));
+		ResidentSince = new TextFieldWidget(this.font, this.guiLeft + 105, this.guiTop + 62, 120, 20, new StringTextComponent(""));
 		guistate.put("text:ResidentSince", ResidentSince);
 		ResidentSince.setMaxStringLength(32767);
 		this.children.add(this.ResidentSince);
-		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 111, 56, 20, new StringTextComponent("Écrire"), e -> {
+		this.addButton(new Button(this.guiLeft + 87, this.guiTop + 89, 56, 20, new StringTextComponent("Écrire"), e -> {
 			if (true) {
 				DarkrpStuffMod.PACKET_HANDLER.sendToServer(new WeaponCardMakerGUIGui.ButtonPressedMessage(0, x, y, z));
 				WeaponCardMakerGUIGui.handleButtonAction(entity, 0, x, y, z);

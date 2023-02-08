@@ -1,8 +1,0 @@
-{
-  "parent": "darkrp_stuff:custom/cardmaker",
-  "textures": {
-    "all": "darkrp_stuff:blocks/cardmaker2",
-    "particle": "darkrp_stuff:blocks/cardmaker2",
-    "0": "darkrp_stuff:blocks/cardmaker2"
-  }
-}
